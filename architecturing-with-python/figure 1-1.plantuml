@@ -1,0 +1,43 @@
+@startuml figure 1
+'!include https://raw.githubusercontent.com/bschwarz/puml-themes/master/themes/silver/puml-theme-silver.puml
+!include https://raw.githubusercontent.com/bschwarz/puml-themes/master/themes/cerulean/puml-theme-cerulean.puml
+
+'left to right direction
+top to bottom direction
+
+component [Flask] as F
+
+rectangle "ServiceLayer" {
+    component [Services] as S
+    component [Unit Of Work] as U
+}
+
+
+rectangle "Domain" {
+    component [D1]
+    component [D2]
+    component [D3]
+}
+
+rectangle "Adapters" {
+    component [repository] as R
+}
+
+
+
+
+database DB
+
+F --> S : invokes
+U --> Adapters : provides
+
+
+S -> U : starts
+R --> DB : commit changes to 
+Adapters -> Domain : load and save
+S ----> Domain : call methods on
+
+D1 -> D2
+D2 --> D3
+
+@enduml

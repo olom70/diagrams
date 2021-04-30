@@ -1,0 +1,78 @@
+@startmindmap ChangDirection<>WBS
+!include https://raw.githubusercontent.com/bschwarz/puml-themes/master/themes/materia/puml-theme-materia.puml
+* Business Process Modelling WBS
+** Launch the project
+*** Complete Stakeholder Research
+*** Initial Implementation Plan
+** Design phase
+*** Model of AsIs Processes Completed
+**** Model of AsIs Processes Completed1
+**** Model of AsIs Processes Completed2
+*** Measure AsIs performance metrics
+*** Identify Quick Wins
+@endmindmap
+
+@startmindmap FullExampleMindMap
+<style>
+mindmapDiagram {
+    node {
+      Padding 12
+      Margin 3
+      HorizontalAlignment center
+      LineColor blue
+      LineThickness 3.0
+      BackgroundColor gold
+      RoundCorner 40
+      MaximumWidth 150
+    }
+    rootNode {
+      LineStyle 8.0;3.0
+      LineColor red
+      BackgroundColor white
+      LineThickness 1.0
+      RoundCorner 0
+      Shadowing 0.0
+   }
+   leafNode {
+    LineColor red
+    RoundCorner 0
+    Padding 3
+}
+    :depth(1) {
+      BackGroundColor white
+    }
+}
+</style>
+caption figure 1
+title My super title
+
+* <&flag>Debian
+** <&globe>Ubuntu
+*** Linux Mint
+*** Kubuntu
+*** Lubuntu
+*** KDE Neon
+** <&graph>LMDE
+** <&pulse>SolydXK
+** <&people>SteamOS
+** <&star>Raspbian with a very long name
+*** <s>Raspmbc</s> => OSMC
+**** Fourth
+*** <s>Raspyfi</s> => Volumio
+
+left side
+
+**_ left
+**_ twice
+
+header
+My super header
+endheader
+
+center footer My super footer
+
+legend right
+  Short
+  legend
+endlegend
+@endmindmap
