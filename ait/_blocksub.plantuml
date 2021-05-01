@@ -1,0 +1,102 @@
+@startuml allTheBlocks
+!include _posparam.plantuml
+
+' All the blocks ready to include in any diagram
+' grouped by quarters
+
+!startsub Q0022
+$rectanglePOS("IL00005", "Receivables Accounting", $level="I")
+$rectanglePOS("IL00006", "Payables Accounting", $level="I")
+$rectanglePOS("IL00007", "Asset Accounting", $level="I")
+$rectanglePOS("IL00008", "General Ledger Accounting & Closing", $level="I")
+$rectanglePOS("IL00009", "Cash & Treasury", $level="I")
+$rectanglePOS("IL00010", "Tax and Duties Management ", $level="I")
+$rectanglePOS("IL00014", "Task Automation ", $level="I")
+$rectanglePOS("IL00015", "Consolidation Accounting", $level="I")
+!endsub
+!startsub Q0028
+$rectanglePOS("IL00001", "Handling Support Management", $level="I")
+$rectanglePOS("IL00002", "Dock Management", $level="I")
+$rectanglePOS("IL00100", "Orchestration in logistics", $level="I")
+$rectanglePOS("IL00101", "Warehouse management", $level="I")
+$rectanglePOS("IL00102", "Transport", $level="I")
+$rectanglePOS("IL00125", "Warehouse Controlling System (WCS)", $level="I")
+!endsub
+!startsub Q0029
+$rectanglePOS("IL00103", "Receiving / Storage / shelving", $level="I")
+$rectanglePOS("IL00104", "Inter store transfer", $level="I")
+$rectanglePOS("IL00105", "Customer order preparation", $level="I")
+$rectanglePOS("IL00124", "In Store Transformation", $level="I")
+!endsub
+!startsub Q0030
+$rectanglePOS("IL00003", "Goods Collection", $level="I")
+$rectanglePOS("IL00004", "Goods Delivery", $level="I")
+!endsub
+!startsub Q0031
+$rectanglePOS("IL00106", "Allocation management", $level="I")
+$rectanglePOS("IL00108", "Replenishment need calculation", $level="I")
+$rectanglePOS("IL00109", "Return to suppliers", $level="I")
+$rectanglePOS("IL00110", "Return & exchange from customer", $level="I")
+$rectanglePOS("IL00111", "Traceability", $level="I")
+$rectanglePOS("IL00112", "Procurement order and planning", $level="I")
+!endsub
+!startsub Q0040
+$rectanglePOS("IL00092", "Partner contract", $level="I")
+$rectanglePOS("IL00093", "Catalog Publication to Partners", $level="I")
+$rectanglePOS("IL00094", "B2B sell / Transfer pricing management", $level="I")
+!endsub
+!startsub Q0042
+$rectanglePOS("IL00085", "Offer Definition", $level="I")
+$rectanglePOS("IL00086", "Vendor catalog", $level="I")
+$rectanglePOS("IL00087", "Merchandising (plan)", $level="I")
+$rectanglePOS("IL00088", "Selling price management", $level="I")
+$rectanglePOS("IL00089", "Product margin management", $level="I")
+$rectanglePOS("IL00091", "Products information enrichment", $level="I")
+!endsub
+!startsub Q0079
+$rectanglePOS("IL00098", "e-Merchandising / e-Product presentation", $level="I")
+$rectanglePOS("IL00099", "Basket & Check-out", $level="I")
+!endsub
+!startsub Q0080
+$rectanglePOS("IL00097", "Merchandising plan", $level="I")
+!endsub
+!startsub Q0091
+$rectanglePOS("IL00012", "Nomenclature", $level="I")
+$rectanglePOS("IL00013", "Supply Chain", $level="I")
+$rectanglePOS("IL00016", "Chart of accounts & accounting keys", $level="I")
+$rectanglePOS("IL00017", "Billing or Invoices Receivable", $level="I")
+$rectanglePOS("IL00018", "Invoices Payable", $level="I")
+$rectanglePOS("IL00115", "Customers", $level="I")
+$rectanglePOS("IL00116", "Products / Services (characteristics; media)", $level="I")
+$rectanglePOS("IL00117", "Suppliers", $level="I")
+$rectanglePOS("IL00118", "Marketplace vendors", $level="I")
+$rectanglePOS("IL00119", "Partners", $level="I")
+$rectanglePOS("IL00120", "Tax & Currencies", $level="I")
+$rectanglePOS("IL00121", "Sites & Countries", $level="I")
+$rectanglePOS("IL00122", "Legal Structure", $level="I")
+$rectanglePOS("IL00123", "Persons", $level="I")
+!endsub
+!startsub Q0100
+$rectanglePOS("IL00113", "Export Management", $level="I")
+$rectanglePOS("IL00114", "Import Management", $level="I")
+!endsub
+!startsub Q0103
+$rectanglePOS("IL00126", "Invoice Control", $level="I")
+$rectanglePOS("IL00127", "Litigation management", $level="I")
+!endsub
+!startsub Q0104
+$rectanglePOS("IL00128", "Product / Supplier referencing; Supplier negotiation; Supplicer contract management; Purchasing budget management", $level="I")
+!endsub
+!startsub Q0105
+$rectanglePOS("IL00011", "Product Referencing", $level="I")
+$rectanglePOS("IL00129", "Marketplace referencing", $level="I")
+$rectanglePOS("IL00130", "Import management", $level="I")
+$rectanglePOS("IL00131", "Purchasing budget management", $level="I")
+$rectanglePOS("IL00132", "Supplier negotiation", $level="I")
+$rectanglePOS("IL00133", "Supplier referencing", $level="I")
+$rectanglePOS("IL00134", "Product Life Cycle Management", $level="I")
+$rectanglePOS("IL00135", "Supplier contract management", $level="I")
+!endsub
+
+@enduml
+

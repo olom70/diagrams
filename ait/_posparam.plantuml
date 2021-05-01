@@ -1,0 +1,44 @@
+@startuml P
+skinparam DefaultTextAlignment center
+allow_mixing
+skinparam Nodesep 2
+
+
+!procedure $rectanglePOS($soluqiqID="tdb", $name="none", $zoneColor="none", $level="Z")
+
+    !$colorGreenZone = "#85C21F"
+    !$colorGreenQuarter = "#EAF8DA"
+    !$colorPurpleZone = "#AC6083"
+    !$colorPurpleQuarter = "#F9E6E7"
+    !$colorBrownZone = "#7A4D26"
+    !$colorBrownQuarter = "#F9E6E7"
+    !$colorRedZone = "#CC3C45"
+    !$colorRedQuarter = "#F9E6E7"
+    !$colorDefaultBlock = "#FFFFE8"
+
+    !if ($zoneColor == "green") && ($level == "Z")
+        !$color = $colorGreenZone
+    !elseif ($zoneColor == "green") && ($level == "Q")
+        !$color = $colorGreenQuarter
+    !elseif ($zoneColor == "red") && ($level == "Z")
+        !$color = $colorRedZone
+    !elseif ($zoneColor == "red") && ($level == "Q")
+        !$color = $colorRedQuarter
+    !elseif ($zoneColor == "purple") && ($level == "Z")
+        !$color = $colorPurpleZone
+    !elseif ($zoneColor == "purple") && ($level == "Q")
+        !$color = $colorPurpleQuarter
+    !elseif ($zoneColor == "brown") && ($level == "Z")
+        !$color = $colorBrownZone
+    !elseif ($zoneColor == "brown") && ($level == "Q")
+        !$color = $colorBrownQuarter
+    !elseif ($zoneColor == "none") && ($level == "Z")
+        !$color = DarkBlue
+    !elseif ($zoneColor == "none") && ($level == "I")
+        !$color = $colorDefaultBlock
+    !endif
+
+    rectangle "$soluqiqID \n $name" $color
+!endprocedure
+
+@enduml

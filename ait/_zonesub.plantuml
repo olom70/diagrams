@@ -1,0 +1,39 @@
+@startuml allZones
+!include _posparam.plantuml
+
+' All the Zones ready to include in any diagram
+
+!startsub Z001
+$rectanglePOS("Z001", "Direct and indirect purchase", "green", "Z" )
+!endsub
+!startsub Z003
+$rectanglePOS("Z003", "Product transformation / manufacturing", "green", "Z" )
+!endsub
+!startsub Z004
+$rectanglePOS("Z004", "Support", "purple", "Z" )
+!endsub
+!startsub Z005
+$rectanglePOS("Z005", "Supply chain", "green", "Z" ) 
+!endsub
+!startsub Z006
+$rectanglePOS("Z006", "Customer marketing and CRM", "green", "Z" ) 
+!endsub
+!startsub Z007
+$rectanglePOS("Z007", "Offer (products & services)", "green", "Z" )
+!endsub
+!startsub Z008
+$rectanglePOS("Z008", "Customer Orders Management", "green", "Z" )
+!endsub
+!startsub Z009
+$rectanglePOS("Z009", "Strategic Management", "red", "Z" ) 
+!endsub
+!startsub Z010
+$rectanglePOS("Z010", "Data Management (Data as an asset)", "brown", "Z" ) 
+!endsub
+!startsub Z013
+$rectanglePOS("Z013", "Sales Channel or brand", "green", "Z" ) 
+!endsub
+!startsub Z015
+$rectanglePOS("Z015", "Commercial Animation", "green", "Z" ) 
+!endsub
+@enduml

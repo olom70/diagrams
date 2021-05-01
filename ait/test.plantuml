@@ -1,0 +1,6 @@
+@startuml allTheBlocks
+!include _posparam.plantuml
+
+!includesub block.plantuml!Q0080
+!includesub block.plantuml!Q0104
+!includesub block.plantuml!Q0105

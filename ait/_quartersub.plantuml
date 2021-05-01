@@ -1,0 +1,16 @@
+@startuml AllQuarters
+!include _posparam.plantuml
+
+$rectanglePOS("Z001", "Direct and indirect purchase", "green", "Z" )
+$rectanglePOS("Z003", "Product transformation / manufacturing", "green", "Z" )
+$rectanglePOS("Z004", "Support", "purple", "Z" )
+$rectanglePOS("Z005", "Supply chain", "green", "Z" )
+$rectanglePOS("Z006", "Customer marketing and CRM", "green", "Z" ) 
+$rectanglePOS("Z007", "Offer (products & services)", "green", "Z" )
+$rectanglePOS("Z008", "Customer Orders Management", "green", "Z" ) 
+$rectanglePOS("Z009", "Strategic Management", "red", "Z" ) 
+$rectanglePOS("Z010", "Data Management (Data as an asset)", "brown", "Z" ) 
+$rectanglePOS("Z013", "Sales Channel or brand", "green", "Z" )
+$rectanglePOS("Z015", "Commercial Animation", "green", "Z" ) 
+
+@enduml
