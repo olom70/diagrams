@@ -1,10 +1,53 @@
 @startuml FunctionalFramework
 !include _posparam.plantuml
 
+$rectanglePOS("Z009", "Strategic Management", "red", "Z" ) {
+    $rectanglePOS("Q0055", "Innovation", "red", "Q")
+    $rectanglePOS("Q0056", "Business Plan", "red", "Q")
+}
+
+
 $rectanglePOS("Z006", "Customer marketing and CRM", "green", "Z" ) {
     $rectanglePOS("Q0032", "Loyalty", "green", "Q")
     $rectanglePOS("Q0033", "Incoming & outgoing Customer Interactions", "green", "Q")
     $rectanglePOS("Q0034", "Customer Account Management", "green", "Q")
+}
+
+$rectanglePOS("Z013", "Sales Channel or brand", "green", "Z" ) {
+    $rectanglePOS("Q0076", "Sales services (before; during; after)", "green", "Q")
+    $rectanglePOS("Q0077", "Payment / Electronic banking / Tills", "green", "Q")
+    $rectanglePOS("Q0079", "Digital sales", "green", "Q"){
+        $rectanglePOS("IL00098", "e-Merchandising / e-Product presentation", $level="I")
+        $rectanglePOS("IL00099", "Basket & Check-out", $level="I")
+    }
+    $rectanglePOS("Q0080", "Physical sales", "green", "Q") {
+        $rectanglePOS("IL00097", "Merchandising plan", $level="I")
+    }
+}
+
+$rectanglePOS("Z010", "Data Management (Data as an asset)", "brown", "Z" ) {
+    $rectanglePOS("Q0086", "Third Party Data", "brown", "Q")
+    $rectanglePOS("Q0087", "Gathering; storage & historization", "brown", "Q")
+    $rectanglePOS("Q0088", "DQM & Data Reconciliation", "brown", "Q")
+    $rectanglePOS("Q0089", "Data analysis & Algorithms", "brown", "Q")
+    $rectanglePOS("Q0090", "Data Dictionary", "brown", "Q")
+    $rectanglePOS("Q0091", "Repositories", "brown", "Q"){
+        $rectanglePOS("IL00012", "Nomenclature", $level="I")
+        $rectanglePOS("IL00013", "Supply Chain", $level="I")
+        $rectanglePOS("IL00016", "Chart of accounts & accounting keys", $level="I")
+        $rectanglePOS("IL00017", "Billing or Invoices Receivable", $level="I")
+        $rectanglePOS("IL00018", "Invoices Payable", $level="I")
+        $rectanglePOS("IL00115", "Customers", $level="I")
+        $rectanglePOS("IL00116", "Products / Services (characteristics; media)", $level="I")
+        $rectanglePOS("IL00117", "Suppliers", $level="I")
+        $rectanglePOS("IL00118", "Marketplace vendors", $level="I")
+        $rectanglePOS("IL00119", "Partners", $level="I")
+        $rectanglePOS("IL00120", "Tax & Currencies", $level="I")
+        $rectanglePOS("IL00121", "Sites & Countries", $level="I")
+        $rectanglePOS("IL00122", "Legal Structure", $level="I")
+        $rectanglePOS("IL00123", "Persons", $level="I")
+    }
+    $rectanglePOS("Q0101", "KPI (calculation & exposition)", "brown", "Q")
 }
 
 $rectanglePOS("Z007", "Offer (products & services)", "green", "Z" ) {
@@ -26,6 +69,13 @@ $rectanglePOS("Z007", "Offer (products & services)", "green", "Z" ) {
 } 
 
 
+$rectanglePOS("Z015", "Commercial Animation", "green", "Z" ) {
+    $rectanglePOS("Q0036", "Commercial animation execution", "green", "Q")
+    $rectanglePOS("Q0084", "Commercial animation development", "green", "Q")
+}
+
+''''
+
 $rectanglePOS("Z001", "Direct and indirect purchase", "green", "Z" ) {
     $rectanglePOS("Q0104", "Indirect Purchase", "green", "Q"){
         $rectanglePOS("IL00128", "Product / Supplier referencing; Supplier negotiation; Supplicer contract management; Purchasing budget management", $level="I")
@@ -41,7 +91,6 @@ $rectanglePOS("Z001", "Direct and indirect purchase", "green", "Z" ) {
         $rectanglePOS("IL00135", "Supplier contract management", $level="I")
     }
 }   
-
 
 $rectanglePOS("Z003", "Product transformation / manufacturing", "green", "Z" ) {
     $rectanglePOS("Q0096", "Formulation and recipes", "green", "Q")
@@ -112,51 +161,15 @@ $rectanglePOS("Z008", "Customer Orders Management", "green", "Z" ) {
     $rectanglePOS("Q0053", "Order monitoring and execution", "green", "Q")
 }
 
-$rectanglePOS("Z009", "Strategic Management", "red", "Z" ) {
-    $rectanglePOS("Q0055", "Innovation", "red", "Q")
-    $rectanglePOS("Q0056", "Business Plan", "red", "Q")
-}
 
-$rectanglePOS("Z010", "Data Management (Data as an asset)", "brown", "Z" ) {
-    $rectanglePOS("Q0086", "Third Party Data", "brown", "Q")
-    $rectanglePOS("Q0087", "Gathering; storage & historization", "brown", "Q")
-    $rectanglePOS("Q0088", "DQM & Data Reconciliation", "brown", "Q")
-    $rectanglePOS("Q0089", "Data analysis & Algorithms", "brown", "Q")
-    $rectanglePOS("Q0090", "Data Dictionary", "brown", "Q")
-    $rectanglePOS("Q0091", "Repositories", "brown", "Q"){
-        $rectanglePOS("IL00012", "Nomenclature", $level="I")
-        $rectanglePOS("IL00013", "Supply Chain", $level="I")
-        $rectanglePOS("IL00016", "Chart of accounts & accounting keys", $level="I")
-        $rectanglePOS("IL00017", "Billing or Invoices Receivable", $level="I")
-        $rectanglePOS("IL00018", "Invoices Payable", $level="I")
-        $rectanglePOS("IL00115", "Customers", $level="I")
-        $rectanglePOS("IL00116", "Products / Services (characteristics; media)", $level="I")
-        $rectanglePOS("IL00117", "Suppliers", $level="I")
-        $rectanglePOS("IL00118", "Marketplace vendors", $level="I")
-        $rectanglePOS("IL00119", "Partners", $level="I")
-        $rectanglePOS("IL00120", "Tax & Currencies", $level="I")
-        $rectanglePOS("IL00121", "Sites & Countries", $level="I")
-        $rectanglePOS("IL00122", "Legal Structure", $level="I")
-        $rectanglePOS("IL00123", "Persons", $level="I")
-    }
-    $rectanglePOS("Q0101", "KPI (calculation & exposition)", "brown", "Q")
-}
 
-$rectanglePOS("Z013", "Sales Channel or brand", "green", "Z" ) {
-    $rectanglePOS("Q0076", "Sales services (before; during; after)", "green", "Q")
-    $rectanglePOS("Q0077", "Payment / Electronic banking / Tills", "green", "Q")
-    $rectanglePOS("Q0079", "Digital sales", "green", "Q"){
-        $rectanglePOS("IL00098", "e-Merchandising / e-Product presentation", $level="I")
-        $rectanglePOS("IL00099", "Basket & Check-out", $level="I")
-    }
-    $rectanglePOS("Q0080", "Physical sales", "green", "Q") {
-        $rectanglePOS("IL00097", "Merchandising plan", $level="I")
-    }
-}
 
-$rectanglePOS("Z015", "Commercial Animation", "green", "Z" ) {
-    $rectanglePOS("Q0036", "Commercial animation execution", "green", "Q")
-    $rectanglePOS("Q0084", "Commercial animation development", "green", "Q")
-}
+Z009 -d-> Z013
+Z009 -d-> Z010
+
+Z009 -d-> Z006
+Z006 -d-> Z015
+Z015 -d-> Z007
+
 
 @enduml
