@@ -2,9 +2,11 @@
 skinparam DefaultTextAlignment center
 allow_mixing
 skinparam Nodesep 2
-skinparam ComponentFontColor white
-skinparam componentStyle rectangle
-
+skinparam component {
+    FontSize 13
+    ComponentFontColor white
+    componentStyle rectangle
+}
 
 !procedure $rectanglePOS($soluqiqID="tdb", $name="none", $zoneColor="none", $level="Z")
     '''
@@ -46,8 +48,16 @@ skinparam componentStyle rectangle
 !endprocedure
 
 !procedure $sbbSoluQIQ($soluqiqID="tdb", $name="none", $sbbColor="none", $instance="1", $version="not provided", $comment="", $type="component")
+    '''
+    ''' Procedure pour dessiner les SBB.
+    ''' $sbbCOlor : doit avoir # devant la couleur
+    ''' $instance : necessaire de l'incrementer pour chaque SBB qui apparait plus d'une fois dans le diagramme
+    ''' $comment : commentaire libre
+    '''
+
+
     $type $soluqiqID##$instance $sbbColor [
-        $name
+        <b>$name
         ---
         $soluqiqID
         ---
