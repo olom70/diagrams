@@ -53,8 +53,8 @@ skinparam component {
     ''' $sbbCOlor : doit avoir # devant la couleur
     ''' $instance : necessaire de l'incrementer pour chaque SBB qui apparait plus d'une fois dans le diagramme
     ''' $comment : commentaire libre
+    ''' $type : doit être un objet du diagramme de composant : component, database, interface, package, node, folder, frame, cloud
     '''
-
 
     $type $soluqiqID##$instance $sbbColor [
         <b>$name
