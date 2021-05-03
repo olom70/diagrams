@@ -2,11 +2,9 @@
 skinparam DefaultTextAlignment center
 allow_mixing
 skinparam Nodesep 2
-skinparam component {
-    FontSize 13
-    ComponentFontColor white
-    componentStyle rectangle
-}
+skinparam ComponentStyle rectangle
+
+
 
 !procedure $rectanglePOS($soluqiqID="tdb", $name="none", $zoneColor="none", $level="Z")
     '''

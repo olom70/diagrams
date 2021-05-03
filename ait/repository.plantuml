@@ -1,5 +1,5 @@
 @startuml RepositoryLinks
-!include _posparam.plantuml
+!include include/_posparam.plantuml
 
 $rectanglePOS("Z010", "Data Management (Data as an asset)", "brown", "Z" ) {
     $rectanglePOS("Q0091", "Repositories", "brown", "Q") {
