@@ -45,8 +45,19 @@ skinparam componentStyle rectangle
     component "$name" as $soluqiqID <<$soluqiqID>> $color
 !endprocedure
 
-!procedure $sbbSoluQIQ($soluqiqID="tdb", $name="none", $sbbColor="none", $instance="1", $version="1")
-    component "<b>$name" as $soluqiqID##$instance <<$soluqiqID>> $sbbColor
+!procedure $sbbSoluQIQ($soluqiqID="tdb", $name="none", $sbbColor="none", $instance="1", $version="not provided", $comment="", $type="component")
+    $type $soluqiqID##$instance $sbbColor [
+        $name
+        ---
+        $soluqiqID
+        ---
+        Version : $version
+        !if ($comment !="")
+        ---
+        $comment
+        !endif
+        ]
+
 !endprocedure
 
 

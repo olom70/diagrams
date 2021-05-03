@@ -4,13 +4,7 @@
 $rectanglePOS("Z010", "Data Management (Data as an asset)", "brown", "Z" ) {
     $rectanglePOS("Q0091", "Repositories", "brown", "Q") {
         $rectanglePOS("IL00012", "Nomenclature", $level="I") {
-            database CO_APP_007 #red [ 
-                <b>Nomenclature
-                ---
-                CO_APP_007
-                ---
-                Vxxx
-            ]
+            $sbbSoluQIQ("CO_APP_007", "Nomenclature", "#red", "1", $type="database")
         }
 
     }
@@ -60,12 +54,12 @@ $rectanglePOS("Z007", "Offer (products & services)", "green", "Z" ) {
     }
 }
 
-CO_APP_007 -d-> CO_APP_0391
-CO_APP_007 -d-> CO_APP_0392
-CO_APP_007 -d-> CO_APP_0393
-CO_APP_007 -d-> CO_APP_0394
-CO_APP_007 -d-> CO_APP_0395
-CO_APP_007 -d-> CO_APP_0396
-CO_APP_007 -d-> CO_APP_0397
+CO_APP_0071 -d-> CO_APP_0391
+CO_APP_0071 -d-> CO_APP_0392
+CO_APP_0071 -d-> CO_APP_0393
+CO_APP_0071 -d-> CO_APP_0394
+CO_APP_0071 -d-> CO_APP_0395
+CO_APP_0071 -d-> CO_APP_0396
+CO_APP_0071 -d-> CO_APP_0397
 
 @enduml
