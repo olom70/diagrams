@@ -1,0 +1,11 @@
+<style>
+
+mindmapDiagram {
+    :depth(1) {
+      BackGroundColor pink
+    }
+    :depth(2) {
+      BackGroundColor Orange
+    }
+}
+</style>

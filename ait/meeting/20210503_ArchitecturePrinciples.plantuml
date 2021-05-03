@@ -1,0 +1,111 @@
+@startmindmap 20210503-ArchitecturePrinciples-1
+!include ../include/_mindmap.plantuml
+
+title 20210503\n Principes d'architecture - PArtie 1 Généralités
+
+'!include https://raw.githubusercontent.com/bschwarz/puml-themes/master/themes/materia/puml-theme-materia.puml
+* Objectif Architecture
+** Transformation continue
+** Rapide
+*** Qualité de service
+** Core Model
+*** Objectif 
+**** Des processus métiers commun aux pays
+**** Des applications et des méthodes communes
+**** Focus Data : car une partie des déficiences vient d'un défaut de qualité de données.
+**** Conséquence : démarche Data Ready
+*** Historique
+**** Au début c'était un catalogue d'application pris à discrétion par les pays
+**** Maintenant : core model est un sensemble à déployer rapidement dans les pays
+***** Changement de culture :
+****** On passe de laisser des briques de lego au choix du pays
+****** à fournir une maison fini
+*** Exigence
+**** Rapidité de déploiement des solutions
+**** Amélioration continue
+**** Préparation de l'avenir
+***** Le core Model apporte l'innovation à l'ensemble des pays via les solutions communes
+** Périmètre
+*** Auchan Retail Commerce
+*** Couches : 
+**** métier
+**** application
+**** données
+**** technique
+**** sécurité
+** Hors périmètre
+*** Les pays conservent leurs IT
+** Principe de déploiement
+*** Tous les flux passent par passerelle Yoda
+*** L'existant des pays des adapté au core Model
+
+@endmindmap
+@startmindmap 20210503-ArchitecturePrinciples-2
+!include ../include/_mindmap.plantuml
+
+title 20210503\n Principes d'architecture - Partie 2 : Les principes
+
+* Principes d'Architecture
+** Core Model
+*** décision DG
+*** solutions communes dans tous les pays
+**** picking interdit
+** Data Driven, Data Centric
+*** Data est un asset
+*** Dictionnaire d'entreprise : MDM
+*** Data Driven : limité les décisions à l'instinct
+*** Data Centric : data est un asset = des référentiels autonomes
+**** Important car ARI référence des solutions éditeurs
+**** Les solutions choisies doivent respecter un cadre d'intégration
+*** Equipe Dédiée
+**** Data Steward
+**** Objet métier dans un glossaire
+**** Dictionnaire applicatif pour lineage de la donnée
+** Standards & Interoperability
+*** Découplage
+*** Standardiser les échanges
+**** technique (API / JSON)
+**** Format neutre d'échange entre pays (GS1) et avec les franchisés
+**** à l'intérieur du core model (protocole standard)
+** Future Proof
+*** composants réutilisables
+*** capacité à innover
+*** modularité
+*** Exposer les données
+** Security
+*** protection données
+*** résilience des services
+** Cloud Based
+*** SaaS first, cloud otherwise
+**** Azure
+**** Meti sur OVH car contrainte Oracle
+*** Russie
+**** Hébergeur Russes avec des data center sur le territpire russe
+** Continuous Improvement
+*** Réduction Time to Market
+*** Feature Flipping
+*** Pas d'interruption de service
+*** CI/CD
+*** components always up to date
+*** FinOPs
+**** coût à l'usage
+**** serverless
+** Debt Control
+*** Simplifier le S.I.
+*** Décommissioner
+*** Réduire la Dette
+*** Maintenir les solutions à jour
+
+@endmindmap
+@startmindmap 20210503-ArchitecturePrinciples-3
+!include ../include/_mindmap.plantuml
+
+title 20210503\n Principes d'architecture - Partie 3 : Les règles
+
+* Les règles
+** introduction
+*** s'imposent car servent les principes d'architectures
+*** périmètre : Architecture d'entreprise
+*** question du respect de la règle : la réponse doit être oui/non
+
+@endmindmap
