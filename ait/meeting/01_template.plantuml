@@ -1,0 +1,11 @@
+@startmindmap 20210504
+!include ../include/_mindmap.plantuml
+
+title TDB
+
++ Root
+++ First
+
+-- Second 
+
+@endmindmap

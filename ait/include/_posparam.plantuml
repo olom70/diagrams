@@ -6,9 +6,10 @@ skinparam ComponentStyle rectangle
 
 
 
-!procedure $rectanglePOS($soluqiqID="tdb", $name="none", $zoneColor="none", $level="Z")
+!procedure $rectanglePOS($soluqiqID="tdb", $name="none", $zoneColor="#LightGray", $level="Z", $instance="1")
     '''
-    ''' Procedure pour dessiner les différents niveaux du framework fonctionnel Zone / Quartier / ilot
+    ''' Procedure pour dessiner les différents niveaux du framework fonctionnel
+    ''' Zone / Quartier / ilot / SBB / Function SBB
     '''
     !$colorGreenZone = "#85C21F"
     !$colorGreenQuarter = "#EAF8DA"
@@ -38,11 +39,13 @@ skinparam ComponentStyle rectangle
         !$color = $colorBrownQuarter
     !elseif ($zoneColor == "none") && ($level == "Z")
         !$color = DarkBlue
-    !elseif ($zoneColor == "none") && ($level == "I")
+    !elseif ($level == "I")
         !$color = $colorDefaultBlock
+    !else
+        !$color = $zoneColor
     !endif
 
-    component "$name" as $soluqiqID <<$soluqiqID>> $color
+    component "$name" as $soluqiqID##$instance <<$soluqiqID>> $color
 !endprocedure
 
 !procedure $sbbSoluQIQ($soluqiqID="tdb", $name="none", $sbbColor="none", $instance="1", $version="not provided", $comment="", $type="component")
@@ -53,19 +56,7 @@ skinparam ComponentStyle rectangle
     ''' $comment : commentaire libre
     ''' $type : doit être un objet du diagramme de composant : component, database, interface, package, node, folder, frame, cloud
     '''
-
-    $type $soluqiqID##$instance $sbbColor [
-        <b>$name
-        ---
-        $soluqiqID
-        ---
-        Version : $version
-        !if ($comment !="")
-        ---
-        $comment
-        !endif
-        ]
-
+    $type "$name" as $soluqiqID##$instance <<$soluqiqID>> $sbbColor
 !endprocedure
 
 

@@ -1,0 +1,51 @@
+@startuml FinanceOracle
+!include include/_posparam.plantuml
+
+$rectanglePOS('Z004', 'Support', "purple", "Z" ) {
+    $rectanglePOS("Q0022", "Accountability / Finance", "purple", "Q") {
+        $rectanglePOS("IL00005", "Receivables Accounting", $level="I") {
+            $rectanglePOS($soluqiqID='CO_APP_087', $name='O-ERPC - Receivable Accounting', $zoneColor='#FFFFE8', $level='Z', $instance='1') {
+                $rectanglePOS($soluqiqID="Function08", $name=" Receivable Accounting", $zoneColor="#LightGray", $level="Z", $instance="1")
+            }
+        }
+        $rectanglePOS("IL00006", "Payables Accounting", $level="I") {
+            $rectanglePOS($soluqiqID='CO_APP_088', $name='O-ERPC - Payable Accounting', $zoneColor='#LightPink', $level='Z', $instance='1') {
+                $rectanglePOS($soluqiqID="Function07", $name="Payable Accounting", $zoneColor="#LightGray", $level="Z", $instance="1")
+            }
+
+        }
+        $rectanglePOS("IL00007", "Asset Accounting", $level="I") {
+             $rectanglePOS($soluqiqID="CO_APP_92", $name="O-ERPC - Asset Accounting", $zoneColor="#LightBlue", $instance="1") {
+                $rectanglePOS($soluqiqID="Function01", $name="FA Mass Addition", $zoneColor="#LightGray")
+                $rectanglePOS($soluqiqID="Function02", $name="Asset Accounting", $zoneColor="#LightGray")
+             }
+        }
+        $rectanglePOS("IL00008", "General Ledger Accounting & Closing", $level="I") {
+            $rectanglePOS($soluqiqID='CO_APP_091', $name='O-ERPC - General Ledger Accounting', $zoneColor='#LightCyan', $level='Z', $instance='1') {
+                $rectanglePOS($soluqiqID="Function04", $name="GeneralLedgerAccounting", $zoneColor="#LightGray", $level="Z", $instance="1")
+            }
+            $rectanglePOS($soluqiqID='CO_APP_109', $name='O-ERPC - Accounting Translator', $zoneColor='#LightGoldenRodYellow', $level='Z', $instance='1') {
+                $rectanglePOS($soluqiqID="Function05", $name="Accounting Translator", $zoneColor="#LightGray", $level="Z", $instance="1")
+            }
+            $rectanglePOS($soluqiqID='CO_APP_093', $name='O-ERPC - Intercompany Accounting', $zoneColor='#LightGreen', $level='Z', $instance='1') {
+                $rectanglePOS($soluqiqID="Function06", $name=" InterCompany Accounting", $zoneColor="#LightGray", $level="Z", $instance="1")
+            }
+
+        }
+        $rectanglePOS("IL00009", "Cash & Treasury", $level="I") {
+            $rectanglePOS($soluqiqID="CO_APP_089", $name="O-ERPC - Cash Management", $zoneColor="#LightCoral", $level="Z", $instance="1") {
+                $rectanglePOS($soluqiqID="Function03", $name="Cash Management", $instance="1")
+            }
+        }
+        $rectanglePOS("IL00010", "Tax and Duties Management ", $level="I") {
+            $rectanglePOS($soluqiqID='CO_APP_090', $name='O-ERPC - e-Tax Management', $zoneColor='#FFFFE8', $level='Z', $instance='1') {
+                $rectanglePOS($soluqiqID="Function09", $name="e-Tax Management", $zoneColor="#LightGray", $level="Z", $instance="1")
+            }
+        }
+        $rectanglePOS("IL00014", "Task Automation ", $level="I")
+        $rectanglePOS("IL00015", "Consolidation Accounting", $level="I")
+    }
+
+}
+
+@enduml
