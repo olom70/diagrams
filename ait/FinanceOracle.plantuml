@@ -4,7 +4,7 @@
 $rectanglePOS('Z004', 'Support', "purple", "Z" ) {
     $rectanglePOS("Q0022", "Accountability / Finance", "purple", "Q") {
         $rectanglePOS("IL00005", "Receivables Accounting", $level="I") {
-            $rectanglePOS($soluqiqID='CO_APP_087', $name='O-ERPC - Receivable Accounting', $zoneColor='#FFFFE8', $level='Z', $instance='1') {
+            $rectanglePOS($soluqiqID='CO_APP_087', $name='O-ERPC - Receivable Accounting', $zoneColor='#LightSeaGreen', $level='Z', $instance='1') {
                 $rectanglePOS($soluqiqID="Function08", $name=" Receivable Accounting", $zoneColor="#LightGray", $level="Z", $instance="1")
             }
         }
@@ -38,7 +38,7 @@ $rectanglePOS('Z004', 'Support', "purple", "Z" ) {
             }
         }
         $rectanglePOS("IL00010", "Tax and Duties Management ", $level="I") {
-            $rectanglePOS($soluqiqID='CO_APP_090', $name='O-ERPC - e-Tax Management', $zoneColor='#FFFFE8', $level='Z', $instance='1') {
+            $rectanglePOS($soluqiqID='CO_APP_090', $name='O-ERPC - e-Tax Management', $zoneColor='#LightSalmon', $level='Z', $instance='1') {
                 $rectanglePOS($soluqiqID="Function09", $name="e-Tax Management", $zoneColor="#LightGray", $level="Z", $instance="1")
             }
         }
@@ -48,12 +48,12 @@ $rectanglePOS('Z004', 'Support', "purple", "Z" ) {
 
 }
 
-IL000101 --> IL000051
-IL000081 --> IL000091
-IL000081 --> IL000071
-IL000081 --> IL000061
-IL000061 --> IL000151
-IL000061 --> IL000141
+IL000101 -- IL000051
+IL000081 -- IL000091
+IL000081 -- IL000071
+IL000081 -- IL000061
+IL000061 -- IL000151
+IL000061 -- IL000141
 
 
 @enduml
