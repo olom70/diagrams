@@ -14,12 +14,14 @@ $rectanglePOS('Z004', 'Support', "purple", "Z" ) {
             }
 
         }
+
         $rectanglePOS("IL00007", "Asset Accounting", $level="I") {
              $rectanglePOS($soluqiqID="CO_APP_92", $name="O-ERPC - Asset Accounting", $zoneColor="#LightBlue", $instance="1", $iconic="<&sun>") {
                 $rectanglePOS($soluqiqID="Function01", $name="FA Mass Addition", $zoneColor="#LightGray")
                 $rectanglePOS($soluqiqID="Function02", $name="Asset Accounting", $zoneColor="#LightGray")
              }
         }
+
         $rectanglePOS("IL00008", "General Ledger Accounting & Closing", $level="I") {
             $rectanglePOS($soluqiqID='CO_APP_091', $name='O-ERPC - General Ledger Accounting', $zoneColor='#LightCyan', $level='Z', $instance='1', $iconic="<&sun>") {
                 $rectanglePOS($soluqiqID="Function04", $name="GeneralLedgerAccounting", $zoneColor="#LightGray", $level="Z", $instance="1")
@@ -32,11 +34,13 @@ $rectanglePOS('Z004', 'Support', "purple", "Z" ) {
             }
 
         }
+        
         $rectanglePOS("IL00009", "Cash & Treasury", $level="I") {
             $rectanglePOS($soluqiqID="CO_APP_089", $name="O-ERPC - Cash Management", $zoneColor="#LightCoral", $level="Z", $instance="1", $iconic="<&sun>") {
                 $rectanglePOS($soluqiqID="Function03", $name="Cash Management", $instance="1")
             }
         }
+
         $rectanglePOS("IL00010", "Tax and Duties Management ", $level="I") {
             $rectanglePOS($soluqiqID='CO_APP_090', $name='O-ERPC - e-Tax Management', $zoneColor='#LightSalmon', $level='Z', $instance='1', $iconic="<&sun>") {
                 $rectanglePOS($soluqiqID="Function09", $name="e-Tax Management", $zoneColor="#LightGray", $level="Z", $instance="1")
@@ -45,7 +49,6 @@ $rectanglePOS('Z004', 'Support', "purple", "Z" ) {
         $rectanglePOS("IL00014", "Task Automation ", $level="I")
         $rectanglePOS("IL00015", "Consolidation Accounting", $level="I")
     }
-
 }
 
 IL000101 -- IL000051
@@ -53,7 +56,6 @@ IL000081 -- IL000091
 IL000081 -- IL000071
 IL000081 -- IL000061
 IL000061 -- IL000151
-IL000061 -- IL000141
-
+IL000051 -- IL000141
 
 @enduml
