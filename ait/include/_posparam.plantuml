@@ -4,7 +4,8 @@ allow_mixing
 skinparam Nodesep 2
 skinparam ComponentStyle rectangle
 
-
+' excel function
+' =CONCATENER("$rectanglePOS($soluqiqID=""";B2;""", $name=""";C2;""", $zoneColor=""#FFFFE8"", $level=""Z"", $instance=""1"")")
 
 !procedure $rectanglePOS($soluqiqID="tdb", $name="none", $zoneColor="#LightGray", $level="Z", $instance="1")
     '''
