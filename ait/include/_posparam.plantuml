@@ -6,9 +6,9 @@ skinparam ComponentStyle rectangle
 skinparam ArrowThickness 0
 
 ' excel function
-' =CONCATENER("$rectanglePOS($soluqiqID=""";B2;""", $name=""";C2;""", $zoneColor=""#LightGray"", $level=""Z"", $instance=""1"", $iconic=""none"")")
+' =CONCATENATE("$rectanglePOS($soluqiqID=""",B2,""", $name=""",C2,""", $zoneColor=""#LightGray"", $level=""Z"", $instance=""1"", $iconic=""none"", $fullname=""",D2,""")")
 
-!procedure $rectanglePOS($soluqiqID="tdb", $name="none", $zoneColor="#LightGray", $level="Z", $instance="1", $iconic="none")
+!procedure $rectanglePOS($soluqiqID="tdb", $name="none", $zoneColor="#LightGray", $level="Z", $instance="1", $iconic="none", $fullname="not provided")
     '''
     ''' Procedure pour dessiner les différents niveaux du framework fonctionnel
     ''' Zone / Quartier / ilot / SBB / Function SBB
@@ -49,9 +49,9 @@ skinparam ArrowThickness 0
     !endif
 
     !if ($iconic == "none")
-        component "$name" as $soluqiqID##$instance <<$soluqiqID>> $color
+        component "$name##\n<size:6>$fullname" as $soluqiqID##$instance <<$soluqiqID>> $color
     !else
-        component "$iconic\n$name" as $soluqiqID##$instance <<$soluqiqID>> $color
+        component "$iconic\n$name##\n<size:6>$fullname" as $soluqiqID##$instance <<$soluqiqID>> $color
 !endprocedure
 
 !procedure $sbbSoluQIQ($soluqiqID="tdb", $name="none", $sbbColor="none", $instance="1", $version="not provided", $comment="", $type="component")
