@@ -25,7 +25,7 @@ skinparam ArrowThickness 0
     !$colorRedQuarter = "#F9E6E7"
     !$colorDefaultBlock = "#FFFFE8"
 
-    !$fullnamefontsize = "6"
+    !$fullnamefontsize = "11"
 
     !if ($zoneColor == "green") && ($level == "Z")
         !$color = $colorGreenZone

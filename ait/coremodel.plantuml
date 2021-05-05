@@ -1,0 +1,291 @@
+@startuml Z009
+!include include/_posparam.plantuml
+
+$rectanglePOS("Z009", "Strategic Management", "red", "Z" ) {
+    $rectanglePOS("Q0055", "Innovation", "red", "Q")
+    $rectanglePOS("Q0056", "Business Plan", "red", "Q")
+}
+
+@enduml
+
+@startuml Z006
+!include include/_posparam.plantuml
+
+$rectanglePOS("Z006", "Customer marketing and CRM", "green", "Z" ) {
+    $rectanglePOS("Q0032", "Loyalty", "green", "Q") {
+        $rectanglePOS($name="MasterData", $type="package", $instance="0") {
+            $rectanglePOS($soluqiqID="CO_APP_047", $name="Customer Benefits", $zoneColor="#LightSlateGrey", $level="Z", $instance="1", $iconic="<&account-logout>", $fullname="COMARCH - Customer Diamond Benefits & Loyalty")
+        }
+    }
+    $rectanglePOS("Q0033", "Incoming & outgoing Customer Interactions", "green", "Q")
+    $rectanglePOS("Q0034", "Customer Account Management", "green", "Q")
+}
+@enduml
+
+@startuml Z013
+!include include/_posparam.plantuml
+
+$rectanglePOS("Z013", "Sales Channel or brand", "green", "Z" ) {
+    $rectanglePOS("Q0076", "Sales services (before; during; after)", "green", "Q")
+    $rectanglePOS("Q0077", "Payment / Electronic banking / Tills", "green", "Q")
+    $rectanglePOS("Q0079", "Digital sales", "green", "Q"){
+        $rectanglePOS("IL00098", "e-Merchandising / e-Product presentation", $level="I")
+        $rectanglePOS("IL00099", "Basket & Check-out", $level="I")
+    }
+    $rectanglePOS("Q0080", "Physical sales", "green", "Q") {
+        $rectanglePOS("IL00097", "Merchandising plan", $level="I")
+    }
+}
+@enduml
+
+@startuml Z010
+!include include/_posparam.plantuml
+
+$rectanglePOS("Z010", "Data Management (Data as an asset)", "brown", "Z" ) {
+    $rectanglePOS("Q0086", "Third Party Data", "brown", "Q")
+    $rectanglePOS("Q0087", "Gathering; storage & historization", "brown", "Q") {
+        $rectanglePOS($name="Integration", $type="package", $instance="0") {
+            $rectanglePOS($soluqiqID="CO_APP_036", $name="Yoda", $zoneColor="#LightSeaGreen", $level="Z", $instance="1", $iconic="<&action-undo>", $fullname="YODA - Data Exchange Platform & API Management")
+        }
+    }
+    $rectanglePOS("Q0088", "DQM & Data Reconciliation", "brown", "Q")
+    $rectanglePOS("Q0089", "Data analysis & Algorithms", "brown", "Q")
+    $rectanglePOS("Q0090", "Data Dictionary", "brown", "Q")
+    $rectanglePOS("Q0091", "Repositories", "brown", "Q"){
+        $rectanglePOS("IL00012", "Nomenclature", $level="I")
+        $rectanglePOS("IL00013", "Supply Chain", $level="I")
+        $rectanglePOS("IL00016", "Chart of accounts & accounting keys", $level="I")
+        $rectanglePOS("IL00017", "Billing or Invoices Receivable", $level="I")
+        $rectanglePOS("IL00018", "Invoices Payable", $level="I")
+        $rectanglePOS("IL00115", "Customers", $level="I")
+        $rectanglePOS("IL00116", "Products / Services (characteristics; media)", $level="I") {
+            $rectanglePOS($name="Integration", $type="package", $instance="1") {
+                $rectanglePOS($soluqiqID="CO_APP_056", $name="ODE Stock", $zoneColor="#LightGray", $level="Z", $instance="1", $iconic="<&align-center>", $fullname="ODE Stock - Operational Data Exposition")
+            }
+        }
+        $rectanglePOS("IL00117", "Suppliers", $level="I")
+        $rectanglePOS("IL00118", "Marketplace vendors", $level="I")
+        $rectanglePOS("IL00119", "Partners", $level="I")
+        $rectanglePOS("IL00120", "Tax & Currencies", $level="I")
+        $rectanglePOS("IL00121", "Sites & Countries", $level="I")
+        $rectanglePOS("IL00122", "Legal Structure", $level="I")
+        $rectanglePOS("IL00123", "Persons", $level="I")
+    }
+    $rectanglePOS("Q0101", "KPI (calculation & exposition)", "brown", "Q") {
+        $rectanglePOS($name="Consolidation", $type="package", $instance="0") {
+            $rectanglePOS($soluqiqID="CO_APP_006", $name="Datapool", $zoneColor="#LightSalmon", $level="Z", $instance="1", $iconic="<&align-left>", $fullname="GOOGLE CLOUD PLATFORM - Datapool for analytics")
+        }
+    }
+}
+
+Q00911 -- Q00861
+Q00911 -- Q00881
+Q00911 --- Q00891
+Q00911 --- Q00901
+
+
+@enduml
+
+@startuml Z007
+!include include/_posparam.plantuml
+
+$rectanglePOS("Z007", "Offer (products & services)", "green", "Z" ) {
+    $rectanglePOS("Q0040", "Partners Management", "green", "Q"){
+        $rectanglePOS("IL00092", "Partner contract", $level="I")
+        $rectanglePOS("IL00093", "Catalog Publication to Partners", $level="I") {
+            package MasterData as MasterData4 {
+                $rectanglePOS($soluqiqID="CO_APP_039", $name="Collector", $zoneColor="#LightSteelBlue", $level="Z", $instance="1", $iconic="<&account-login>", $fullname="COMARCH - GDSN Provider & Product Referencing")
+            }
+        }
+        $rectanglePOS("IL00094", "B2B sell / Transfer pricing management", $level="I") {
+            $rectanglePOS($name="Commerce", $type="package", $instance="5") {
+                $rectanglePOS($name="Upstream", $type="package", $instance="5") {
+                    $rectanglePOS($soluqiqID="CO_APP_024", $name="METI Central", $zoneColor="#LightPink", $level="Z", $instance="5", $iconic="<&align-right>", $fullname="METI Central")
+                }
+            }
+        }
+    }
+    $rectanglePOS("Q0041", "Product Commitment management", "green", "Q")
+    $rectanglePOS("Q0042", "Offer to Customers", "green", "Q"){
+        $rectanglePOS("IL00085", "Offer Definition", $level="I")
+        $rectanglePOS("IL00086", "Vendor catalog", $level="I") {
+            $rectanglePOS($name="MasterData", $type="package", $instance="9") {
+                $rectanglePOS($soluqiqID="CO_APP_039", $name="Collector", $zoneColor="#LightSteelBlue", $level="Z", $instance="3", $iconic="<&account-login>", $fullname="COMARCH - GDSN Provider & Product Referencing")
+            }
+        }
+        $rectanglePOS("IL00087", "Merchandising (plan)", $level="I")
+        $rectanglePOS("IL00088", "Selling price management", $level="I") {
+            $rectanglePOS($name="Commerce", $type="package", $instance="6") {
+                $rectanglePOS($name="Upstream", $type="package", $instance="6") {
+                    $rectanglePOS($soluqiqID="CO_APP_024", $name="METI Central", $zoneColor="#LightPink", $level="Z", $instance="6", $iconic="<&align-right>", $fullname="METI Central")
+                }
+            }
+        }
+        $rectanglePOS("IL00089", "Product margin management", $level="I")
+        $rectanglePOS("IL00091", "Products information enrichment", $level="I"){
+            $rectanglePOS($name="MasterData", $type="package", $instance="5") {
+                $rectanglePOS($soluqiqID="CO_APP_016", $name="Quable", $zoneColor="#LightSkyBlue", $level="Z", $instance="2", $iconic="<&action-redo>", $fullname="QUABLE - PIM Product Information Management")
+            }
+    }
+} 
+
+@enduml
+
+@startuml Z015
+!include include/_posparam.plantuml
+
+$rectanglePOS("Z015", "Commercial Animation", "green", "Z" ) {
+    $rectanglePOS("Q0036", "Commercial animation execution", "green", "Q")
+    $rectanglePOS("Q0084", "Commercial animation development", "green", "Q")
+}
+
+@enduml
+@startuml Z001
+!include include/_posparam.plantuml
+
+
+$rectanglePOS("Z001", "Direct and indirect purchase", "green", "Z" ) {
+    $rectanglePOS("Q0104", "Indirect Purchase", "green", "Q"){
+        $rectanglePOS("IL00128", "Product / Supplier referencing; Supplier negotiation; Supplicer contract management; Purchasing budget management", $level="I")
+    }
+    $rectanglePOS("Q0105", "Direct Purchase",  "green", "Q"){
+        $rectanglePOS("IL00011", "Product Referencing", $level="I"){
+            $rectanglePOS($name="MasterData", $type="package", $instance="2") {
+                $rectanglePOS($soluqiqID="CO_APP_039", $name="Collector", $zoneColor="#LightSteelBlue", $level="Z", $instance="4", $iconic="<&account-login>", $fullname="COMARCH - GDSN Provider & Product Referencing")
+                $rectanglePOS($soluqiqID="CO_APP_016", $name="Quable", $zoneColor="#LightSkyBlue", $level="Z", $instance="1", $iconic="<&action-redo>", $fullname="QUABLE - PIM Product Information Management")
+            }
+            $rectanglePOS($name="Commerce", $type="package", $instance="7") {
+                $rectanglePOS($name="Upstream", $type="package", $instance="7") {
+                    $rectanglePOS($soluqiqID="CO_APP_024", $name="METI Central", $zoneColor="#LightPink", $level="Z", $instance="7", $iconic="<&align-right>", $fullname="METI Central")
+                }
+            }
+        }
+        $rectanglePOS("IL00129", "Marketplace referencing", $level="I")
+        $rectanglePOS("IL00130", "Import management", $level="I")
+        $rectanglePOS("IL00131", "Purchasing budget management", $level="I")
+        $rectanglePOS("IL00132", "Supplier negotiation", $level="I") {
+            $rectanglePOS($name="MasterData", $type="package", $instance="1") {
+            $rectanglePOS($soluqiqID="CO_APP_039", $name="Collector", $zoneColor="#LightSteelBlue", $level="Z", $instance="2", $iconic="<&account-login>", $fullname="COMARCH - GDSN Provider & Product Referencing")
+            }
+        }
+        $rectanglePOS("IL00133", "Supplier referencing", $level="I") {
+            $rectanglePOS($name="Commerce", $type="package", $instance="1") {
+                $rectanglePOS($name="Upstream", $type="package", $instance="1") {
+                    $rectanglePOS($soluqiqID="CO_APP_024", $name="METI Central", $zoneColor="#LightPink", $level="Z", $instance="1", $iconic="<&align-right>", $fullname="METI Central")
+                }
+            }
+        }
+        $rectanglePOS("IL00134", "Product Life Cycle Management", $level="I")
+        $rectanglePOS("IL00135", "Supplier contract management", $level="I")
+    }
+}   
+
+Q01041 -- Q01051
+
+@enduml
+
+@startuml Z003
+!include include/_posparam.plantuml
+
+$rectanglePOS("Z003", "Product transformation / manufacturing", "green", "Z" ) {
+    $rectanglePOS("Q0096", "Formulation and recipes", "green", "Q")
+    $rectanglePOS("Q0097", "Manufacturing management",  "green", "Q")
+    $rectanglePOS("Q0098", "Chain Management", "green", "Q")
+    }
+
+@enduml
+
+@startuml Z004
+!include include/_posparam.plantuml
+
+$rectanglePOS("Z004", "Support", "purple", "Z" ) {
+    $rectanglePOS("Q0022", "Accountability / Finance", "purple", "Q") {
+        $rectanglePOS("IL00005", "Receivables Accounting", $level="I")
+        $rectanglePOS("IL00006", "Payables Accounting", $level="I")
+        $rectanglePOS("IL00007", "Asset Accounting", $level="I")
+        $rectanglePOS("IL00008", "General Ledger Accounting & Closing", $level="I")
+        $rectanglePOS("IL00009", "Cash & Treasury", $level="I")
+        $rectanglePOS("IL00010", "Tax and Duties Management ", $level="I")
+        $rectanglePOS("IL00014", "Task Automation ", $level="I")
+        $rectanglePOS("IL00015", "Consolidation Accounting", $level="I")
+    }
+    $rectanglePOS("Q0102", "Performance steering", "purple", "Q")
+    $rectanglePOS("Q0023", "IT", "purple", "Q")
+    $rectanglePOS("Q0024", "Legal", "purple", "Q")
+    $rectanglePOS("Q0026", "HR", "purple", "Q")
+    $rectanglePOS("Q0027", "Technical services", "purple", "Q")
+    $rectanglePOS("Q0093", "Supervision", "purple", "Q")
+    $rectanglePOS("Q0099", "Communication & Collaboration", "purple", "Q")
+    $rectanglePOS("Q0103", "Supplier Administration", "purple", "Q"){
+        $rectanglePOS("IL00126", "Invoice Control", $level="I")
+        $rectanglePOS("IL00127", "Litigation management", $level="I")
+    }
+}
+
+@enduml
+@startuml Z005
+!include include/_posparam.plantuml
+
+
+$rectanglePOS("Z005", "Supply chain", "green", "Z" ) {
+    $rectanglePOS("Q0028", "Logistics", "green", "Q"){
+        $rectanglePOS("IL00001", "Handling Support Management", $level="I")
+        $rectanglePOS("IL00002", "Dock Management", $level="I")
+        $rectanglePOS("IL00100", "Orchestration in logistics", $level="I")
+        $rectanglePOS("IL00101", "Warehouse management", $level="I")
+        $rectanglePOS("IL00102", "Transport", $level="I")
+        $rectanglePOS("IL00125", "Warehouse Controlling System (WCS)", $level="I")
+    }
+    $rectanglePOS("Q0029", "Store Back-Office", "green", "Q"){
+        $rectanglePOS("IL00103", "Receiving / Storage / shelving", $level="I")
+        $rectanglePOS("IL00104", "Inter store transfer", $level="I")
+        $rectanglePOS("IL00105", "Customer order preparation", $level="I")
+        $rectanglePOS("IL00124", "In Store Transformation", $level="I") {
+            $rectanglePOS($name="Commerce", $type="package", $instance="2") {
+                $rectanglePOS($name="Upstream", $type="package", $instance="2") {
+                    $rectanglePOS($soluqiqID="CO_APP_024", $name="METI Central", $zoneColor="#LightPink", $level="Z", $instance="2", $iconic="<&align-right>", $fullname="METI Central")
+                }
+            }
+        }
+    }
+    $rectanglePOS("Q0030", "Goods Provision", "green", "Q"){
+        $rectanglePOS("IL00003", "Goods Collection", $level="I")
+        $rectanglePOS("IL00004", "Goods Delivery", $level="I")
+    }
+    $rectanglePOS("Q0031", "Procurement & Replenishment", "green", "Q"){
+        $rectanglePOS("IL00106", "Allocation management", $level="I") {
+            $rectanglePOS($name="Commerce", $type="package", $instance="3") {
+                $rectanglePOS($name="Upstream", $type="package", $instance="3") {
+                    $rectanglePOS($soluqiqID="CO_APP_024", $name="METI Central", $zoneColor="#LightPink", $level="Z", $instance="3", $iconic="<&align-right>", $fullname="METI Central")
+                }
+            }
+        }
+        $rectanglePOS("IL00108", "Replenishment need calculation", $level="I")
+        $rectanglePOS("IL00109", "Return to suppliers", $level="I")
+        $rectanglePOS("IL00110", "Return & exchange from customer", $level="I")
+        $rectanglePOS("IL00111", "Traceability", $level="I")
+        $rectanglePOS("IL00112", "Procurement order and planning", $level="I") {
+            $rectanglePOS($name="Commerce", $type="package", $instance="4") {
+                $rectanglePOS($name="Upstream", $type="package", $instance="4") {
+                    $rectanglePOS($soluqiqID="CO_APP_024", $name="METI Central", $zoneColor="#LightPink", $level="Z", $instance="4", $iconic="<&align-right>", $fullname="METI Central")
+                }
+            }
+        }
+    }
+    $rectanglePOS("Q0100", "Import/Export", "green", "Q"){
+    $rectanglePOS("IL00113", "Export Management", $level="I")
+    $rectanglePOS("IL00114", "Import Management", $level="I")
+    }
+}
+
+@enduml
+@startuml Z008
+!include include/_posparam.plantuml
+
+
+$rectanglePOS("Z008", "Customer Orders Management", "green", "Z" ) {
+    $rectanglePOS("Q0048", "Customer promise calculation", "green", "Q")
+    $rectanglePOS("Q0053", "Order monitoring and execution", "green", "Q")
+}
+
+@enduml
