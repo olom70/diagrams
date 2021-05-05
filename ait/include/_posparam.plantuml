@@ -2,13 +2,14 @@
 skinparam DefaultTextAlignment center
 allow_mixing
 skinparam Nodesep 2
+skinparam Ranksep 2
 skinparam ComponentStyle rectangle
 skinparam ArrowThickness 0
 
 ' excel function
 ' =CONCATENATE("$rectanglePOS($soluqiqID=""",B2,""", $name=""",C2,""", $zoneColor=""#LightGray"", $level=""Z"", $instance=""1"", $iconic=""none"", $fullname=""",D2,""")")
 
-!procedure $rectanglePOS($soluqiqID="tdb", $name="none", $zoneColor="#LightGray", $level="Z", $instance="1", $iconic="none", $fullname="not provided")
+!procedure $rectanglePOS($soluqiqID="tdb", $name="none", $zoneColor="#LightGray", $level=".", $instance="1", $iconic="none", $fullname="Data Management", $type="component")
     '''
     ''' Procedure pour dessiner les différents niveaux du framework fonctionnel
     ''' Zone / Quartier / ilot / SBB / Function SBB
@@ -23,6 +24,8 @@ skinparam ArrowThickness 0
     !$colorRedZone = "#CC3C45"
     !$colorRedQuarter = "#F9E6E7"
     !$colorDefaultBlock = "#FFFFE8"
+
+    !$fullnamefontsize = "6"
 
     !if ($zoneColor == "green") && ($level == "Z")
         !$color = $colorGreenZone
@@ -48,10 +51,17 @@ skinparam ArrowThickness 0
         !$color = $zoneColor
     !endif
 
-    !if ($iconic == "none")
-        component "$name##\n<size:6>$fullname" as $soluqiqID##$instance <<$soluqiqID>> $color
-    !else
-        component "$iconic\n$name##\n<size:6>$fullname" as $soluqiqID##$instance <<$soluqiqID>> $color
+    !if ($type == "package")
+        $type $name as $name##$instance
+    !endif
+    
+    !if ($type != "package")
+        !if ($iconic == "none")
+            $type "$name##\n<size:$fullnamefontsize>$fullname" as $soluqiqID##$instance <<$soluqiqID>> $color
+        !else
+            $type "$iconic\n$name##\n<size:$fullnamefontsize>$fullname" as $soluqiqID##$instance <<$soluqiqID>> $color
+        !endif
+    !endif
 !endprocedure
 
 !procedure $sbbSoluQIQ($soluqiqID="tdb", $name="none", $sbbColor="none", $instance="1", $version="not provided", $comment="", $type="component")
