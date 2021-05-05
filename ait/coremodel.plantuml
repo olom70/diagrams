@@ -94,7 +94,11 @@ $rectanglePOS("Z007", "Offer (products & services)", "green", "Z" ) {
         $rectanglePOS("IL00092", "Partner contract", $level="I")
         $rectanglePOS("IL00093", "Catalog Publication to Partners", $level="I") {
             package MasterData as MasterData4 {
-                $rectanglePOS($soluqiqID="CO_APP_039", $name="Collector", $zoneColor="#LightSteelBlue", $level="Z", $instance="1", $iconic="<&account-login>", $fullname="COMARCH - GDSN Provider & Product Referencing")
+                $rectanglePOS($name="Commerce", $type="package", $instance="10") {
+                    $rectanglePOS($name="Upstream", $type="package", $instance="2") {
+                        $rectanglePOS($soluqiqID="CO_APP_039", $name="Collector", $zoneColor="#LightSteelBlue", $level="Z", $instance="1", $iconic="<&account-login>", $fullname="COMARCH - GDSN Provider & Product Referencing")
+                    }
+                }
             }
         }
         $rectanglePOS("IL00094", "B2B sell / Transfer pricing management", $level="I") {
@@ -110,7 +114,11 @@ $rectanglePOS("Z007", "Offer (products & services)", "green", "Z" ) {
         $rectanglePOS("IL00085", "Offer Definition", $level="I")
         $rectanglePOS("IL00086", "Vendor catalog", $level="I") {
             $rectanglePOS($name="MasterData", $type="package", $instance="9") {
-                $rectanglePOS($soluqiqID="CO_APP_039", $name="Collector", $zoneColor="#LightSteelBlue", $level="Z", $instance="3", $iconic="<&account-login>", $fullname="COMARCH - GDSN Provider & Product Referencing")
+                $rectanglePOS($name="Commerce", $type="package", $instance="12") {
+                    $rectanglePOS($name="Upstream", $type="package", $instance="3") {
+                        $rectanglePOS($soluqiqID="CO_APP_039", $name="Collector", $zoneColor="#LightSteelBlue", $level="Z", $instance="3", $iconic="<&account-login>", $fullname="COMARCH - GDSN Provider & Product Referencing")
+                    }
+                }
             }
         }
         $rectanglePOS("IL00087", "Merchandising (plan)", $level="I")
@@ -151,8 +159,12 @@ $rectanglePOS("Z001", "Direct and indirect purchase", "green", "Z" ) {
     $rectanglePOS("Q0105", "Direct Purchase",  "green", "Q"){
         $rectanglePOS("IL00011", "Product Referencing", $level="I"){
             $rectanglePOS($name="MasterData", $type="package", $instance="2") {
-                $rectanglePOS($soluqiqID="CO_APP_039", $name="Collector", $zoneColor="#LightSteelBlue", $level="Z", $instance="4", $iconic="<&account-login>", $fullname="COMARCH - GDSN Provider & Product Referencing")
-                $rectanglePOS($soluqiqID="CO_APP_016", $name="Quable", $zoneColor="#LightSkyBlue", $level="Z", $instance="1", $iconic="<&action-redo>", $fullname="QUABLE - PIM Product Information Management")
+                $rectanglePOS($name="Commerce", $type="package", $instance="10") {
+                    $rectanglePOS($name="Upstream", $type="package", $instance="2") {
+                        $rectanglePOS($soluqiqID="CO_APP_039", $name="Collector", $zoneColor="#LightSteelBlue", $level="Z", $instance="4", $iconic="<&account-login>", $fullname="COMARCH - GDSN Provider & Product Referencing")
+                        $rectanglePOS($soluqiqID="CO_APP_016", $name="Quable", $zoneColor="#LightSkyBlue", $level="Z", $instance="1", $iconic="<&action-redo>", $fullname="QUABLE - PIM Product Information Management")
+                    }
+                }
             }
             $rectanglePOS($name="Commerce", $type="package", $instance="7") {
                 $rectanglePOS($name="Upstream", $type="package", $instance="7") {
@@ -165,7 +177,11 @@ $rectanglePOS("Z001", "Direct and indirect purchase", "green", "Z" ) {
         $rectanglePOS("IL00131", "Purchasing budget management", $level="I")
         $rectanglePOS("IL00132", "Supplier negotiation", $level="I") {
             $rectanglePOS($name="MasterData", $type="package", $instance="1") {
-            $rectanglePOS($soluqiqID="CO_APP_039", $name="Collector", $zoneColor="#LightSteelBlue", $level="Z", $instance="2", $iconic="<&account-login>", $fullname="COMARCH - GDSN Provider & Product Referencing")
+                $rectanglePOS($name="Commerce", $type="package", $instance="11") {
+                    $rectanglePOS($name="Upstream", $type="package", $instance="3") {
+                        $rectanglePOS($soluqiqID="CO_APP_039", $name="Collector", $zoneColor="#LightSteelBlue", $level="Z", $instance="2", $iconic="<&account-login>", $fullname="COMARCH - GDSN Provider & Product Referencing")
+                    }
+                }
             }
         }
         $rectanglePOS("IL00133", "Supplier referencing", $level="I") {
