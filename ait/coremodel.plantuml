@@ -13,7 +13,7 @@ $rectanglePOS("Z009", "Strategic Management", "red", "Z" ) {
 
 $rectanglePOS("Z006", "Customer marketing and CRM", "green", "Z" ) {
     $rectanglePOS("Q0032", "Loyalty", "green", "Q") {
-        $rectanglePOS($name="MasterData", $type="package", $instance="0") {
+        $rectanglePOS($name="Client", $type="package", $instance="0") {
             $rectanglePOS($soluqiqID="CO_APP_047", $name="Customer Benefits", $zoneColor="#LightSlateGrey", $level="Z", $instance="1", $iconic="<&account-logout>", $fullname="COMARCH - Customer Diamond Benefits & Loyalty")
         }
     }
@@ -33,7 +33,14 @@ $rectanglePOS("Z013", "Sales Channel or brand", "green", "Z" ) {
         $rectanglePOS("IL00099", "Basket & Check-out", $level="I")
     }
     $rectanglePOS("Q0080", "Physical sales", "green", "Q") {
-        $rectanglePOS("IL00097", "Merchandising plan", $level="I")
+        $rectanglePOS("IL00097", "Merchandising plan", $level="I") {
+            $rectanglePOS($name="Commerce", $type="package", $instance="293") {
+                $rectanglePOS($name="Upstream", $type="package", $instance="293") {
+                    $rectanglePOS($soluqiqID="CO_APP_029", $name="My Offer", $zoneColor="#Beige", $level="Z", $instance="3", $iconic="<&arrow-circle-top>", $fullname="MY OFFER - Permanent Offer")
+                }
+            }
+
+        }
     }
 }
 @enduml
@@ -100,9 +107,15 @@ $rectanglePOS("Z007", "Offer (products & services)", "green", "Z" ) {
                     }
                 }
             }
+            $rectanglePOS($name="Commerce", $type="package", $instance="292") {
+                $rectanglePOS($name="Upstream", $type="package", $instance="292") {
+                    $rectanglePOS($soluqiqID="CO_APP_029", $name="My Offer", $zoneColor="#Beige", $level="Z", $instance="2", $iconic="<&arrow-circle-top>", $fullname="MY OFFER - Permanent Offer")
+                }
+            }
+
         }
         $rectanglePOS("IL00094", "B2B sell / Transfer pricing management", $level="I") {
-            $rectanglePOS($name="Commerce", $type="package", $instance="5") {
+            $rectanglePOS($name="Commerce", $type="package", $instance="9") {
                 $rectanglePOS($name="Upstream", $type="package", $instance="5") {
                     $rectanglePOS($soluqiqID="CO_APP_024", $name="METI Central", $zoneColor="#LightPink", $level="Z", $instance="5", $iconic="<&align-right>", $fullname="METI Central")
                 }
@@ -111,7 +124,15 @@ $rectanglePOS("Z007", "Offer (products & services)", "green", "Z" ) {
     }
     $rectanglePOS("Q0041", "Product Commitment management", "green", "Q")
     $rectanglePOS("Q0042", "Offer to Customers", "green", "Q"){
-        $rectanglePOS("IL00085", "Offer Definition", $level="I")
+        $rectanglePOS("IL00085", "Offer Definition", $level="I") {
+            $rectanglePOS($name="Commerce", $type="package", $instance="291") {
+                $rectanglePOS($name="Upstream", $type="package", $instance="291") {
+                    $rectanglePOS($soluqiqID="CO_APP_029", $name="My Offer", $zoneColor="#Beige", $level="Z", $instance="1", $iconic="<&arrow-circle-top>", $fullname="MY OFFER - Permanent Offer")
+                }
+            }
+
+        }
+
         $rectanglePOS("IL00086", "Vendor catalog", $level="I") {
             $rectanglePOS($name="MasterData", $type="package", $instance="9") {
                 $rectanglePOS($name="Commerce", $type="package", $instance="12") {
@@ -123,11 +144,22 @@ $rectanglePOS("Z007", "Offer (products & services)", "green", "Z" ) {
         }
         $rectanglePOS("IL00087", "Merchandising (plan)", $level="I")
         $rectanglePOS("IL00088", "Selling price management", $level="I") {
-            $rectanglePOS($name="Commerce", $type="package", $instance="6") {
+            $rectanglePOS($name="Commerce", $type="package", $instance="11") {
                 $rectanglePOS($name="Upstream", $type="package", $instance="6") {
                     $rectanglePOS($soluqiqID="CO_APP_024", $name="METI Central", $zoneColor="#LightPink", $level="Z", $instance="6", $iconic="<&align-right>", $fullname="METI Central")
                 }
             }
+            $rectanglePOS($name="Commerce", $type="package", $instance="4210") {
+                $rectanglePOS($name="Downstream", $type="package", $instance="4210") {
+                    $rectanglePOS($soluqiqID="CO_APP_042", $name="METI Store", $zoneColor="#LightPink", $level="Z", $instance="10", $iconic="<&arrow-bottom>", $fullname="METI - Retail Diamond Store")
+                }
+            }
+            $rectanglePOS($name="Commerce", $type="package", $instance="4910") {
+                $rectanglePOS($name="Downstream", $type="package", $instance="4910") {
+                    $rectanglePOS($soluqiqID="CO_APP_049", $name="My Store", $zoneColor="#LightCyan", $level="Z", $instance="10", $iconic="<&arrow-circle-bottom>", $fullname="MY STORE - Mobility in store")
+                }
+            }
+
         }
         $rectanglePOS("IL00089", "Product margin management", $level="I")
         $rectanglePOS("IL00091", "Products information enrichment", $level="I"){
@@ -159,14 +191,14 @@ $rectanglePOS("Z001", "Direct and indirect purchase", "green", "Z" ) {
     $rectanglePOS("Q0105", "Direct Purchase",  "green", "Q"){
         $rectanglePOS("IL00011", "Product Referencing", $level="I"){
             $rectanglePOS($name="MasterData", $type="package", $instance="2") {
-                $rectanglePOS($name="Commerce", $type="package", $instance="10") {
+                $rectanglePOS($name="Commerce", $type="package", $instance="5") {
                     $rectanglePOS($name="Upstream", $type="package", $instance="2") {
                         $rectanglePOS($soluqiqID="CO_APP_039", $name="Collector", $zoneColor="#LightSteelBlue", $level="Z", $instance="4", $iconic="<&account-login>", $fullname="COMARCH - GDSN Provider & Product Referencing")
                         $rectanglePOS($soluqiqID="CO_APP_016", $name="Quable", $zoneColor="#LightSkyBlue", $level="Z", $instance="1", $iconic="<&action-redo>", $fullname="QUABLE - PIM Product Information Management")
                     }
                 }
             }
-            $rectanglePOS($name="Commerce", $type="package", $instance="7") {
+            $rectanglePOS($name="Commerce", $type="package", $instance="6") {
                 $rectanglePOS($name="Upstream", $type="package", $instance="7") {
                     $rectanglePOS($soluqiqID="CO_APP_024", $name="METI Central", $zoneColor="#LightPink", $level="Z", $instance="7", $iconic="<&align-right>", $fullname="METI Central")
                 }
@@ -177,22 +209,35 @@ $rectanglePOS("Z001", "Direct and indirect purchase", "green", "Z" ) {
         $rectanglePOS("IL00131", "Purchasing budget management", $level="I")
         $rectanglePOS("IL00132", "Supplier negotiation", $level="I") {
             $rectanglePOS($name="MasterData", $type="package", $instance="1") {
-                $rectanglePOS($name="Commerce", $type="package", $instance="11") {
+                $rectanglePOS($name="Commerce", $type="package", $instance="7") {
                     $rectanglePOS($name="Upstream", $type="package", $instance="3") {
                         $rectanglePOS($soluqiqID="CO_APP_039", $name="Collector", $zoneColor="#LightSteelBlue", $level="Z", $instance="2", $iconic="<&account-login>", $fullname="COMARCH - GDSN Provider & Product Referencing")
                     }
                 }
+            $rectanglePOS($name="Commerce", $type="package", $instance="511") {
+                $rectanglePOS($name="Upstream", $type="package", $instance="511") {
+                    $rectanglePOS($soluqiqID="CO_APP_051", $name="ANEE", $zoneColor="#LightGoldenRodYellow", $level="Z", $instance="1", $iconic="<&arrow-circle-right>", $fullname="ANEE - Negociation and Management of Supplier contracts")
+                }
+            }
+
             }
         }
         $rectanglePOS("IL00133", "Supplier referencing", $level="I") {
-            $rectanglePOS($name="Commerce", $type="package", $instance="1") {
+            $rectanglePOS($name="Commerce", $type="package", $instance="8") {
                 $rectanglePOS($name="Upstream", $type="package", $instance="1") {
                     $rectanglePOS($soluqiqID="CO_APP_024", $name="METI Central", $zoneColor="#LightPink", $level="Z", $instance="1", $iconic="<&align-right>", $fullname="METI Central")
                 }
             }
         }
         $rectanglePOS("IL00134", "Product Life Cycle Management", $level="I")
-        $rectanglePOS("IL00135", "Supplier contract management", $level="I")
+        $rectanglePOS("IL00135", "Supplier contract management", $level="I") {
+            $rectanglePOS($name="Commerce", $type="package", $instance="512") {
+                $rectanglePOS($name="Upstream", $type="package", $instance="512") {
+                    $rectanglePOS($soluqiqID="CO_APP_051", $name="ANEE", $zoneColor="#LightGoldenRodYellow", $level="Z", $instance="2", $iconic="<&arrow-circle-right>", $fullname="ANEE - Negociation and Management of Supplier contracts")
+                }
+            }
+
+        }
     }
 }   
 
@@ -217,7 +262,14 @@ $rectanglePOS("Z003", "Product transformation / manufacturing", "green", "Z" ) {
 $rectanglePOS("Z004", "Support", "purple", "Z" ) {
     $rectanglePOS("Q0022", "Accountability / Finance", "purple", "Q") {
         $rectanglePOS("IL00005", "Receivables Accounting", $level="I")
-        $rectanglePOS("IL00006", "Payables Accounting", $level="I")
+        $rectanglePOS("IL00006", "Payables Accounting", $level="I") {
+            $rectanglePOS($name="Commerce", $type="package", $instance="513") {
+                $rectanglePOS($name="Upstream", $type="package", $instance="513") {
+                    $rectanglePOS($soluqiqID="CO_APP_051", $name="ANEE", $zoneColor="#LightGoldenRodYellow", $level="Z", $instance="3", $iconic="<&arrow-circle-right>", $fullname="ANEE - Negociation and Management of Supplier contracts")
+                }
+            }
+
+        }
         $rectanglePOS("IL00007", "Asset Accounting", $level="I")
         $rectanglePOS("IL00008", "General Ledger Accounting & Closing", $level="I")
         $rectanglePOS("IL00009", "Cash & Treasury", $level="I")
@@ -233,8 +285,21 @@ $rectanglePOS("Z004", "Support", "purple", "Z" ) {
     $rectanglePOS("Q0093", "Supervision", "purple", "Q")
     $rectanglePOS("Q0099", "Communication & Collaboration", "purple", "Q")
     $rectanglePOS("Q0103", "Supplier Administration", "purple", "Q"){
-        $rectanglePOS("IL00126", "Invoice Control", $level="I")
-        $rectanglePOS("IL00127", "Litigation management", $level="I")
+        $rectanglePOS("IL00126", "Invoice Control", $level="I") {
+            $rectanglePOS($name="Commerce", $type="package", $instance="281") {
+                $rectanglePOS($name="Downstream", $type="package", $instance="281") {
+                    $rectanglePOS($soluqiqID="CO_APP_028", $name="METI Matching", $zoneColor="#LightPink", $level="Z", $instance="1", $iconic="<&arrow-circle-left>", $fullname="METI - Retail Diamond Invoice Matching")
+                }
+            }
+        }
+        $rectanglePOS("IL00127", "Litigation management", $level="I") {
+            $rectanglePOS($name="Commerce", $type="package", $instance="282") {
+                $rectanglePOS($name="Downstream", $type="package", $instance="282") {
+                    $rectanglePOS($soluqiqID="CO_APP_028", $name="METI Matching", $zoneColor="#LightPink", $level="Z", $instance="2", $iconic="<&arrow-circle-left>", $fullname="METI - Retail Diamond Invoice Matching")
+                }
+            }
+
+        }
     }
 }
 
@@ -253,20 +318,85 @@ $rectanglePOS("Z005", "Supply chain", "green", "Z" ) {
         $rectanglePOS("IL00125", "Warehouse Controlling System (WCS)", $level="I")
     }
     $rectanglePOS("Q0029", "Store Back-Office", "green", "Q"){
-        $rectanglePOS("IL00103", "Receiving / Storage / shelving", $level="I")
-        $rectanglePOS("IL00104", "Inter store transfer", $level="I")
-        $rectanglePOS("IL00105", "Customer order preparation", $level="I")
+        $rectanglePOS("IL00103", "Receiving / Storage / shelving", $level="I") {
+            $rectanglePOS($name="Commerce", $type="package", $instance="424") {
+                $rectanglePOS($name="Downstream", $type="package", $instance="424") {
+                    $rectanglePOS($soluqiqID="CO_APP_042", $name="METI Store", $zoneColor="#LightPink", $level="Z", $instance="4", $iconic="<&arrow-bottom>", $fullname="METI - Retail Diamond Store")
+                }
+            }
+            $rectanglePOS($name="Commerce", $type="package", $instance="491") {
+                $rectanglePOS($name="Downstream", $type="package", $instance="491") {
+                    $rectanglePOS($soluqiqID="CO_APP_049", $name="My Store", $zoneColor="#LightCyan", $level="Z", $instance="1", $iconic="<&arrow-circle-bottom>", $fullname="MY STORE - Mobility in store")
+                }
+            }
+        }
+        $rectanglePOS("IL00104", "Inter store transfer", $level="I") {
+            $rectanglePOS($name="Commerce", $type="package", $instance="422") {
+                $rectanglePOS($name="Downstream", $type="package", $instance="422") {
+                    $rectanglePOS($soluqiqID="CO_APP_042", $name="METI Store", $zoneColor="#LightPink", $level="Z", $instance="2", $iconic="<&arrow-bottom>", $fullname="METI - Retail Diamond Store")
+                }
+            }
+            $rectanglePOS($name="Commerce", $type="package", $instance="492") {
+                $rectanglePOS($name="Downstream", $type="package", $instance="492") {
+                    $rectanglePOS($soluqiqID="CO_APP_049", $name="My Store", $zoneColor="#LightCyan", $level="Z", $instance="2", $iconic="<&arrow-circle-bottom>", $fullname="MY STORE - Mobility in store")
+                }
+            }
+
+        }
+        $rectanglePOS("IL00105", "Customer order preparation", $level="I") {
+            $rectanglePOS($name="Commerce", $type="package", $instance="421") {
+                $rectanglePOS($name="Downstream", $type="package", $instance="421") {
+                    $rectanglePOS($soluqiqID="CO_APP_042", $name="METI Store", $zoneColor="#LightPink", $level="Z", $instance="1", $iconic="<&arrow-bottom>", $fullname="METI - Retail Diamond Store")
+                }
+            }
+            $rectanglePOS($name="Commerce", $type="package", $instance="498") {
+                $rectanglePOS($name="Downstream", $type="package", $instance="498") {
+                    $rectanglePOS($soluqiqID="CO_APP_049", $name="My Store", $zoneColor="#LightCyan", $level="Z", $instance="8", $iconic="<&arrow-circle-bottom>", $fullname="MY STORE - Mobility in store")
+                }
+            }
+
+        }
         $rectanglePOS("IL00124", "In Store Transformation", $level="I") {
             $rectanglePOS($name="Commerce", $type="package", $instance="2") {
                 $rectanglePOS($name="Upstream", $type="package", $instance="2") {
                     $rectanglePOS($soluqiqID="CO_APP_024", $name="METI Central", $zoneColor="#LightPink", $level="Z", $instance="2", $iconic="<&align-right>", $fullname="METI Central")
                 }
             }
+            $rectanglePOS($name="Commerce", $type="package", $instance="427") {
+                $rectanglePOS($name="Downstream", $type="package", $instance="427") {
+                    $rectanglePOS($soluqiqID="CO_APP_042", $name="METI Store", $zoneColor="#LightPink", $level="Z", $instance="7", $iconic="<&arrow-bottom>", $fullname="METI - Retail Diamond Store")
+                }
+            }
+            $rectanglePOS($name="Commerce", $type="package", $instance="497") {
+                $rectanglePOS($name="Downstream", $type="package", $instance="497") {
+                    $rectanglePOS($soluqiqID="CO_APP_049", $name="My Store", $zoneColor="#LightCyan", $level="Z", $instance="7", $iconic="<&arrow-circle-bottom>", $fullname="MY STORE - Mobility in store")
+                }
+            }
+
         }
     }
     $rectanglePOS("Q0030", "Goods Provision", "green", "Q"){
-        $rectanglePOS("IL00003", "Goods Collection", $level="I")
-        $rectanglePOS("IL00004", "Goods Delivery", $level="I")
+        $rectanglePOS("IL00003", "Goods Collection", $level="I") {
+            $rectanglePOS($name="Commerce", $type="package", $instance="429") {
+                $rectanglePOS($name="Downstream", $type="package", $instance="429") {
+                    $rectanglePOS($soluqiqID="CO_APP_042", $name="METI Store", $zoneColor="#LightPink", $level="Z", $instance="9", $iconic="<&arrow-bottom>", $fullname="METI - Retail Diamond Store")
+                }
+            }
+            $rectanglePOS($name="Commerce", $type="package", $instance="499") {
+                $rectanglePOS($name="Downstream", $type="package", $instance="499") {
+                    $rectanglePOS($soluqiqID="CO_APP_049", $name="My Store", $zoneColor="#LightCyan", $level="Z", $instance="9", $iconic="<&arrow-circle-bottom>", $fullname="MY STORE - Mobility in store")
+                }
+            }
+
+        }
+        $rectanglePOS("IL00004", "Goods Delivery", $level="I") {
+                        $rectanglePOS($name="Commerce", $type="package", $instance="19") {
+                $rectanglePOS($name="Downstream", $type="package", $instance="9") {
+                    $rectanglePOS($soluqiqID="CO_APP_043", $name="METI Supply", $zoneColor="#LightPink", $level="Z", $instance="9", $iconic="<&aperture>", $fullname="METI - Retail Diamond Supply")
+                }
+            }
+
+        }
     }
     $rectanglePOS("Q0031", "Procurement & Replenishment", "green", "Q"){
         $rectanglePOS("IL00106", "Allocation management", $level="I") {
@@ -275,22 +405,106 @@ $rectanglePOS("Z005", "Supply chain", "green", "Z" ) {
                     $rectanglePOS($soluqiqID="CO_APP_024", $name="METI Central", $zoneColor="#LightPink", $level="Z", $instance="3", $iconic="<&align-right>", $fullname="METI Central")
                 }
             }
+            $rectanglePOS($name="Commerce", $type="package", $instance="14") {
+                $rectanglePOS($name="Downstream", $type="package", $instance="3") {
+                    $rectanglePOS($soluqiqID="CO_APP_043", $name="METI Supply", $zoneColor="#LightPink", $level="Z", $instance="3", $iconic="<&aperture>", $fullname="METI - Retail Diamond Supply")
+                }
+            }
+            $rectanglePOS($name="Commerce", $type="package", $instance="426") {
+                $rectanglePOS($name="Downstream", $type="package", $instance="426") {
+                    $rectanglePOS($soluqiqID="CO_APP_042", $name="METI Store", $zoneColor="#LightPink", $level="Z", $instance="6", $iconic="<&arrow-bottom>", $fullname="METI - Retail Diamond Store")
+                }
+            }
+            $rectanglePOS($name="Commerce", $type="package", $instance="495") {
+                $rectanglePOS($name="Downstream", $type="package", $instance="495") {
+                    $rectanglePOS($soluqiqID="CO_APP_049", $name="My Store", $zoneColor="#LightCyan", $level="Z", $instance="5", $iconic="<&arrow-circle-bottom>", $fullname="MY STORE - Mobility in store")
+                }
+            }
+
         }
-        $rectanglePOS("IL00108", "Replenishment need calculation", $level="I")
-        $rectanglePOS("IL00109", "Return to suppliers", $level="I")
-        $rectanglePOS("IL00110", "Return & exchange from customer", $level="I")
+        $rectanglePOS("IL00108", "Replenishment need calculation", $level="I") {
+            $rectanglePOS($name="Commerce", $type="package", $instance="19") {
+                $rectanglePOS($name="Downstream", $type="package", $instance="8") {
+                    $rectanglePOS($soluqiqID="CO_APP_043", $name="METI Supply", $zoneColor="#LightPink", $level="Z", $instance="8", $iconic="<&aperture>", $fullname="METI - Retail Diamond Supply")
+                }
+            }
+
+        }
+        $rectanglePOS("IL00109", "Return to suppliers", $level="I") {
+            $rectanglePOS($name="Commerce", $type="package", $instance="18") {
+                $rectanglePOS($name="Downstream", $type="package", $instance="7") {
+                    $rectanglePOS($soluqiqID="CO_APP_043", $name="METI Supply", $zoneColor="#LightPink", $level="Z", $instance="7", $iconic="<&aperture>", $fullname="METI - Retail Diamond Supply")
+                }
+            }
+            $rectanglePOS($name="Commerce", $type="package", $instance="428") {
+                $rectanglePOS($name="Downstream", $type="package", $instance="428") {
+                    $rectanglePOS($soluqiqID="CO_APP_042", $name="METI Store", $zoneColor="#LightPink", $level="Z", $instance="8", $iconic="<&arrow-bottom>", $fullname="METI - Retail Diamond Store")
+                }
+            }
+            $rectanglePOS($name="Commerce", $type="package", $instance="494") {
+                $rectanglePOS($name="Downstream", $type="package", $instance="494") {
+                    $rectanglePOS($soluqiqID="CO_APP_049", $name="My Store", $zoneColor="#LightCyan", $level="Z", $instance="4", $iconic="<&arrow-circle-bottom>", $fullname="MY STORE - Mobility in store")
+                }
+            }
+
+        }
+        $rectanglePOS("IL00110", "Return & exchange from customer", $level="I") {
+            $rectanglePOS($name="Commerce", $type="package", $instance="17") {
+                $rectanglePOS($name="Downstream", $type="package", $instance="6") {
+                    $rectanglePOS($soluqiqID="CO_APP_043", $name="METI Supply", $zoneColor="#LightPink", $level="Z", $instance="6", $iconic="<&aperture>", $fullname="METI - Retail Diamond Supply")
+                }
+            }
+            $rectanglePOS($name="Commerce", $type="package", $instance="425") {
+                $rectanglePOS($name="Downstream", $type="package", $instance="425") {
+                    $rectanglePOS($soluqiqID="CO_APP_042", $name="METI Store", $zoneColor="#LightPink", $level="Z", $instance="5", $iconic="<&arrow-bottom>", $fullname="METI - Retail Diamond Store")
+                }
+            }
+            $rectanglePOS($name="Commerce", $type="package", $instance="496") {
+                $rectanglePOS($name="Downstream", $type="package", $instance="496") {
+                    $rectanglePOS($soluqiqID="CO_APP_049", $name="My Store", $zoneColor="#LightCyan", $level="Z", $instance="6", $iconic="<&arrow-circle-bottom>", $fullname="MY STORE - Mobility in store")
+                }
+            }
+
+        }
         $rectanglePOS("IL00111", "Traceability", $level="I")
         $rectanglePOS("IL00112", "Procurement order and planning", $level="I") {
-            $rectanglePOS($name="Commerce", $type="package", $instance="4") {
+            $rectanglePOS($name="Commerce", $type="package", $instance="15") {
                 $rectanglePOS($name="Upstream", $type="package", $instance="4") {
                     $rectanglePOS($soluqiqID="CO_APP_024", $name="METI Central", $zoneColor="#LightPink", $level="Z", $instance="4", $iconic="<&align-right>", $fullname="METI Central")
                 }
             }
+            $rectanglePOS($name="Commerce", $type="package", $instance="16") {
+                $rectanglePOS($name="Downstream", $type="package", $instance="5") {
+                    $rectanglePOS($soluqiqID="CO_APP_043", $name="METI Supply", $zoneColor="#LightPink", $level="Z", $instance="5", $iconic="<&aperture>", $fullname="METI - Retail Diamond Supply")
+                }
+            }
+            $rectanglePOS($name="Commerce", $type="package", $instance="423") {
+                $rectanglePOS($name="Downstream", $type="package", $instance="423") {
+                    $rectanglePOS($soluqiqID="CO_APP_042", $name="METI Store", $zoneColor="#LightPink", $level="Z", $instance="3", $iconic="<&arrow-bottom>", $fullname="METI - Retail Diamond Store")
+                }
+            }
+            $rectanglePOS($name="Commerce", $type="package", $instance="493") {
+                $rectanglePOS($name="Downstream", $type="package", $instance="493") {
+                    $rectanglePOS($soluqiqID="CO_APP_049", $name="My Store", $zoneColor="#LightCyan", $level="Z", $instance="3", $iconic="<&arrow-circle-bottom>", $fullname="MY STORE - Mobility in store")
+                }
+            }
+
         }
     }
     $rectanglePOS("Q0100", "Import/Export", "green", "Q"){
-    $rectanglePOS("IL00113", "Export Management", $level="I")
-    $rectanglePOS("IL00114", "Import Management", $level="I")
+    $rectanglePOS("IL00113", "Export Management", $level="I") {
+        $rectanglePOS($name="Commerce", $type="package", $instance="6") {
+            $rectanglePOS($name="Downstream", $type="package", $instance="1") {
+                $rectanglePOS($soluqiqID="CO_APP_043", $name="METI Supply", $zoneColor="#LightPink", $level="Z", $instance="1", $iconic="<&aperture>", $fullname="METI - Retail Diamond Supply")
+            }
+        }
+    }
+    $rectanglePOS("IL00114", "Import Management", $level="I") {
+        $rectanglePOS($name="Commerce", $type="package", $instance="13") {
+            $rectanglePOS($name="Downstream", $type="package", $instance="2") {
+                $rectanglePOS($soluqiqID="CO_APP_043", $name="METI Supply", $zoneColor="#LightPink", $level="Z", $instance="2", $iconic="<&aperture>", $fullname="METI - Retail Diamond Supply")
+            }
+        }
     }
 }
 
