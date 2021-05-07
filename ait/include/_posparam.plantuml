@@ -1,7 +1,7 @@
 @startuml P
 skinparam DefaultTextAlignment center
 allow_mixing
-skinparam Nodesep 2
+skinparam Nodesep 1
 skinparam Ranksep 2
 skinparam ComponentStyle rectangle
 skinparam ArrowThickness 0
@@ -9,7 +9,7 @@ skinparam ArrowThickness 0
 ' excel function
 ' =CONCATENATE("$rectanglePOS($soluqiqID=""",B2,""", $name=""",C2,""", $zoneColor=""#LightGray"", $level=""Z"", $instance=""1"", $iconic=""none"", $fullname=""",D2,""")")
 
-!procedure $rectanglePOS($soluqiqID="tdb", $name="none", $zoneColor="#LightGray", $level=".", $instance="1", $iconic="none", $fullname="Data Management", $type="component")
+!procedure $rectanglePOS($soluqiqID="tdb", $name="none", $zoneColor="#LightGray", $level=".", $instance="1", $iconic="none", $fullname=".", $type="component")
     '''
     ''' Procedure pour dessiner les différents niveaux du framework fonctionnel
     ''' Zone / Quartier / ilot / SBB / Function SBB
@@ -29,33 +29,33 @@ skinparam ArrowThickness 0
 
     !if ($zoneColor == "green") && ($level == "Z")
         !$color = $colorGreenZone
-    !elseif ($zoneColor == "green") && ($level == "Q")
-        !$color = $colorGreenQuarter
-    !elseif ($zoneColor == "red") && ($level == "Z")
-        !$color = $colorRedZone
-    !elseif ($zoneColor == "red") && ($level == "Q")
-        !$color = $colorRedQuarter
-    !elseif ($zoneColor == "purple") && ($level == "Z")
-        !$color = $colorPurpleZone
-    !elseif ($zoneColor == "purple") && ($level == "Q")
-        !$color = $colorPurpleQuarter
-    !elseif ($zoneColor == "brown") && ($level == "Z")
-        !$color = $colorBrownZone
-    !elseif ($zoneColor == "brown") && ($level == "Q")
-        !$color = $colorBrownQuarter
-    !elseif ($zoneColor == "none") && ($level == "Z")
-        !$color = DarkBlue
-    !elseif ($level == "I")
-        !$color = $colorDefaultBlock
-    !else
-        !$color = $zoneColor
+        !elseif ($zoneColor == "green") && ($level == "Q")
+            !$color = $colorGreenQuarter
+        !elseif ($zoneColor == "red") && ($level == "Z")
+            !$color = $colorRedZone
+        !elseif ($zoneColor == "red") && ($level == "Q")
+            !$color = $colorRedQuarter
+        !elseif ($zoneColor == "purple") && ($level == "Z")
+            !$color = $colorPurpleZone
+        !elseif ($zoneColor == "purple") && ($level == "Q")
+            !$color = $colorPurpleQuarter
+        !elseif ($zoneColor == "brown") && ($level == "Z")
+            !$color = $colorBrownZone
+        !elseif ($zoneColor == "brown") && ($level == "Q")
+            !$color = $colorBrownQuarter
+        !elseif ($zoneColor == "none") && ($level == "Z")
+            !$color = DarkBlue
+        !elseif ($level == "I")
+            !$color = $colorDefaultBlock
+        !else
+            !$color = $zoneColor
     !endif
 
     !if ($type == "package")
         $type $name as $name##$instance
     !endif
-    
-    !if ($type != "package")
+
+    !if ($type == "component")
         !if ($iconic == "none")
             $type "$name##\n<size:$fullnamefontsize>$fullname" as $soluqiqID##$instance <<$soluqiqID>> $color
         !else
@@ -65,14 +65,6 @@ skinparam ArrowThickness 0
 !endprocedure
 
 !procedure $sbbSoluQIQ($soluqiqID="tdb", $name="none", $sbbColor="none", $instance="1", $version="not provided", $comment="", $type="component")
-    ''' DEPRECATED
-    '''
-    ''' Procedure pour dessiner les SBB.
-    ''' $sbbCOlor : doit avoir # devant la couleur
-    ''' $instance : necessaire de l'incrementer pour chaque SBB qui apparait plus d'une fois dans le diagramme
-    ''' $comment : commentaire libre
-    ''' $type : doit être un objet du diagramme de composant : component, database, interface, package, node, folder, frame, cloud
-    '''
     $type "$name" as $soluqiqID##$instance <<$soluqiqID>> $sbbColor
 !endprocedure
 
