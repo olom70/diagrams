@@ -1,5 +1,6 @@
 @startuml Z009
 !include include/_posparam.plantuml
+$blankarrow()
 
 $rectanglePOS("Z009", "Strategic Management", "red", "Z" ) {
     $rectanglePOS("Q0055", "Innovation", "red", "Q")
@@ -10,6 +11,7 @@ $rectanglePOS("Z009", "Strategic Management", "red", "Z" ) {
 
 @startuml Z006
 !include include/_posparam.plantuml
+$blankarrow()
 
 $rectanglePOS("Z006", "Customer marketing and CRM", "green", "Z" ) {
     $rectanglePOS("Q0032", "Loyalty", "green", "Q") {
@@ -63,6 +65,8 @@ Q00761 -- Q00791
 
 @startuml Z010_Q0091
 !include include/_posparam.plantuml
+$blankarrow()
+
 $rectanglePOS("Z010", "Data Management (Data as an asset)", "brown", "Z" ) {
     $rectanglePOS("Q0091", "Repositories", "brown", "Q"){
         $rectanglePOS("IL00012", "Nomenclature", $level="I")
@@ -218,6 +222,8 @@ IL000911 - IL000891
 
 @startuml Z007_Q0040_Q0041
 !include include/_posparam.plantuml
+$blankarrow()
+
 
 $rectanglePOS("Z007", "Offer (products & services)", "green", "Z" ) {
     $rectanglePOS("Q0040", "Partners Management", "green", "Q"){
@@ -263,6 +269,8 @@ $rectanglePOS("Z007", "Offer (products & services)", "green", "Z" ) {
 
 @startuml Z015
 !include include/_posparam.plantuml
+$blankarrow()
+
 
 $rectanglePOS("Z015", "Commercial Animation", "green", "Z" ) {
     $rectanglePOS("Q0036", "Commercial animation execution", "green", "Q")
@@ -346,6 +354,8 @@ $rectanglePOS("Z001", "Direct and indirect purchase", "green", "Z" ) {
 
 @startuml Z001_Q0105_ILx
 !include include/_posparam.plantuml
+$blankarrow()
+
 
 $rectanglePOS("Z001", "Direct and indirect purchase", "green", "Z" ) {
     $rectanglePOS("Q0105", "Direct Purchase",  "green", "Q"){
@@ -362,6 +372,8 @@ $rectanglePOS("Z001", "Direct and indirect purchase", "green", "Z" ) {
 
 @startuml Z001_Q0004
 !include include/_posparam.plantuml
+$blankarrow()
+
 
 $rectanglePOS("Z001", "Direct and indirect purchase", "green", "Z" ) {
     $rectanglePOS("Q0104", "Indirect Purchase", "green", "Q"){
@@ -373,6 +385,8 @@ $rectanglePOS("Z001", "Direct and indirect purchase", "green", "Z" ) {
 
 @startuml Z003
 !include include/_posparam.plantuml
+$blankarrow()
+
 
 $rectanglePOS("Z003", "Product transformation / manufacturing", "green", "Z" ) {
     $rectanglePOS("Q0096", "Formulation and recipes", "green", "Q")
@@ -384,6 +398,8 @@ $rectanglePOS("Z003", "Product transformation / manufacturing", "green", "Z" ) {
 
 @startuml Z004
 !include include/_posparam.plantuml
+$blankarrow()
+
 
 $rectanglePOS("Z004", "Support", "purple", "Z" ) {
     $rectanglePOS("Q0022", "Accountability / Finance", "purple", "Q") {
@@ -735,6 +751,8 @@ $rectanglePOS("Z005", "Supply chain", "green", "Z" ) {
 
 @startuml Z008
 !include include/_posparam.plantuml
+$blankarrow()
+
 
 
 $rectanglePOS("Z008", "Customer Orders Management", "green", "Z" ) {

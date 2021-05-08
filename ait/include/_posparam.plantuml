@@ -1,11 +1,11 @@
 @startuml P
 skinparam DefaultTextAlignment center
 allow_mixing
-skinparam Nodesep 1
-skinparam Ranksep 2
 skinparam ComponentStyle rectangle
 
 !procedure $blankarrow()
+    skinparam Nodesep 1
+    skinparam Ranksep 2
     skinparam ArrowThickness 0
 !endprocedure
 
