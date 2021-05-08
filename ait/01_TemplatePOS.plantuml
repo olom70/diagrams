@@ -1,5 +1,7 @@
-@startuml FinanceOracle
+@startuml CommerceDependencies
 !include include/_posparam.plantuml
+
+title Commerce Applications Dependencies
 
 
 
