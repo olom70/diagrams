@@ -1,0 +1,89 @@
+@startgantt CommerceDependencies
+hide footbox
+
+title Commerce : (known) Applications Dependencies
+
+
+[Mapping] as [MAPPING] lasts 10 days
+note bottom
+Collector/Quable
+with Country attributes
+end note
+
+[Collector CO_APP_039 <&account-login>] as [COLLECTOR] lasts 10 Days and is colored in LightSteelBlue
+
+[Quable CO_APP_016 <&action-redo>] as [QUABLE] lasts 10 Days and is colored in LightSkyBlue
+
+[MAPPING]->[COLLECTOR]
+[MAPPING]->[QUABLE]
+
+--
+[UOA Methodology] as [UOA] lasts 10 days
+[WIFI in stores] as [WIFI] lasts 10 days
+[BIRDY in stores] as [BIRDY] lasts 10 days
+[METI 9020] as [M9020] lasts 10 days
+[Site Repository] as [SITE] lasts 10 days
+[Nomenclature Repository] as [NOMEMCLATURE] lasts 10 days
+
+
+[My Offer CO_APP_029 <&arrow-circle-top>] as [MYOFFER] lasts 10 days and is colored in Beige
+[METI Store CO_APP_042 <&arrow-right>] as [METISTORE] lasts 11 days and is colored in LightPink
+
+
+[METI Central CO_APP_024 <&arrow-bottom>] as [METIC] lasts 11 days and is colored in LightPink  
+'$rectanglePOS($soluqiqID="CO_APP_049", $name="My Store", $zoneColor="#LightCyan", $level="Z", $instance="4", $iconic="<&arrow-circle-bottom>", $fullname="MY STORE - Mobility in store") {
+[My Store CO_APP_049 <&arrow-circle-bottom>] as [MYSTORE] lasts 11 days and is colored in LightCyan
+[RPE CO_APP_034 <&bar-chart>] as [RPE] lasts 11 days and is colored in Bisque
+
+[All repositories] as [ALLREPO] lasts 10 days
+
+[My Offer Opé CO_APP_082 <&arrow-right>] as [MYOFFEROPE] lasts 11 days and is colored in AntiqueWhite
+
+[METI Supply CO_APP_043 <&aperture>] as [METISUPPLY] lasts 11 days and is colored in LightPink
+'$rectanglePOS($soluqiqID="CO_APP_028", $name="METI Matching", $zoneColor="#LightPink", $level="Z", $instance="1", $iconic="<&arrow-circle-left>", $fullname="METI - Retail Diamond Invoice Matching") {
+[METI Matching CO_APP_028 <&arrow-circle-left>] as [METIMATCHING] lasts 12 days and is colored in LightPink
+
+
+[UOA]->[MYOFFER]
+[WIFI]->[MYOFFER]
+[BIRDY]->[MYOFFER]
+[M9020]->[MYOFFER]
+[SITE]->[MYOFFER]
+[NOMEMCLATURE]->[MYOFFER]
+
+[METISTORE]-> [MYOFFEROPE]
+[METISUPPLY]->[MYOFFEROPE]
+[ALLREPO]->[MYOFFEROPE]
+[MYOFFER]-[#green]->[MYOFFEROPE]
+[MYOFFER]-[#green]->[METIC]
+[MYOFFEROPE]->[METIC]
+[METISUPPLY]->[METIC]
+[METIC]->[METISUPPLY]
+[METISTORE]->[METIC]
+[METISTORE]->[MYSTORE]
+[METIC]->[MYSTORE]
+[METISTORE]->[RPE]
+[METIC]->[RPE]
+[MYSTORE]->[RPE]
+[METIC]-> [METIMATCHING]
+[METISTORE]->[METIMATCHING]
+[METISUPPLY]->[METIMATCHING]
+
+[GCS Generix CO_APP_001 <&badge>] as [GCS] lasts 11 days and is colored in Azure
+
+[Tesisquare CO_APP_053 <&ban>] as [Tesisquare] lasts 11 days and is colored in BUSINESS
+
+[GCS]->[Tesisquare]
+[METISUPPLY]->[Tesisquare]
+
+--
+[Relex CO_APP_057 <&audio-spectrum>] as [Relex] lasts 11 days and is colored in Aqua
+
+--
+[Optimix CO_APP_003 <&bar-chart>] as [Optimix] lasts 11 days and is colored in DarkSeaGreen
+
+--
+[ANEE CO_APP_051 <&arrow-circle-right>] as [ANEE] lasts 11 days and is colored in LightGoldenRodYellow
+
+
+@endgantt
