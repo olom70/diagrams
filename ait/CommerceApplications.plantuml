@@ -1,0 +1,101 @@
+@startuml CommerceApplicationsUpstream
+!include include/_posparam.plantuml
+$blankarrow()
+title Commerce Applications Upstream
+
+
+
+$rectanglePOS($name="Upstream", $type="package", $instance="1") {
+    $rectanglePOS($soluqiqID="CO_APP_039", $name="Collector", $zoneColor="#LightSteelBlue", $level="Z", $instance="1", $iconic="<&account-login>", $fullname="COMARCH - GDSN Provider & Product Referencing") {
+        usecase "product prereferencing\nproduct referencing\nsending product to GICA / METI / Enrichment" as pr1
+    }
+
+    $rectanglePOS($soluqiqID="CO_APP_024", $name="METI Central", $zoneColor="#LightPink", $level="Z", $instance="1", $iconic="<&align-right>", $fullname="METI Central") {
+        usecase "Manage commercial supplier referencing\nManage product referencing for B2B\nMastering product life cycle\nSend supplier and Product to MDM / METI" as MetiCentral6
+    }
+
+    $rectanglePOS($soluqiqID="CO_APP_016", $name="Quable", $zoneColor="#LightSkyBlue", $level="Z", $instance="1", $iconic="<&action-redo>", $fullname="QUABLE - PIM Product Information Management") {
+        usecase "Product information validation\nEnrichment" as quable2
+    }
+
+    $rectanglePOS($soluqiqID="CO_APP_029", $name="My Offer", $zoneColor="#Beige", $level="Z", $instance="1", $iconic="<&arrow-circle-top>", $fullname="MY OFFER - Permanent Offer") {
+        usecase "Build multi-format offer\nOptimisation of detention and implementation" as MyOffer2
+    }
+    $rectanglePOS($soluqiqID="CO_APP_022", $name="My Offer Tablet", $zoneColor="#AliceBlue", $level="Z", $instance="1", $iconic="<&arrow-left>", $fullname="My Offer Tablet")
+
+    $rectanglePOS($soluqiqID="CO_APP_082", $name="My Offer Opé", $zoneColor="#AntiqueWhite", $level="Z", $instance="1", $iconic="<&arrow-right>", $fullname="My Offer - Promotional offer") {
+        usecase "commercial operations management" as MyOfferOpe1
+    }
+
+    $rectanglePOS($soluqiqID="CO_APP_003", $name="Optimix", $zoneColor="#DarkSeaGreen", $level="Z", $instance="1", $iconic="<&bar-chart>", $fullname="OPTI-MIX - Pricing optimization") {
+        usecase "manage pricing policy"
+    }
+
+    $rectanglePOS($soluqiqID="CO_APP_051", $name="ANEE", $zoneColor="#LightGoldenRodYellow", $level="Z", $instance="1", $iconic="<&arrow-circle-right>", $fullname="ANEE - Negociation and Management of Supplier contracts") {
+        usecase "Negotiation\nContracting\nInvoicing" as ANEE1
+    }
+
+CO_APP_0391 - CO_APP_0241
+CO_APP_0241 - CO_APP_0161
+CO_APP_0391 -- CO_APP_0291
+CO_APP_0291 - CO_APP_0221
+CO_APP_0221 - CO_APP_0821
+CO_APP_0291 -- CO_APP_0031
+CO_APP_0031 - CO_APP_0511
+
+}
+@enduml
+
+@startuml CommerceApplicationsDownstream
+!include include/_posparam.plantuml
+$blankarrow()
+title Commerce Applications Downstream
+
+$rectanglePOS($name="Downstream", $type="package", $instance="1") {
+
+    $rectanglePOS($soluqiqID="CO_APP_043", $name="METI Supply", $zoneColor="#LightPink", $level="Z", $instance="1", $iconic="<&aperture>", $fullname="METI - Retail Diamond Supply") {
+        usecase "Supply chain from suppliers to customer" as MetiSupply7
+    }
+
+    $rectanglePOS($soluqiqID="CO_APP_001", $name="GCS Generix", $zoneColor="#Azure", $level="Z", $instance="1", $iconic="<&badge>", $fullname="GENERIX - WMS Warehouse Management System") {
+        usecase "Reception\nStorage\nPreparation\nShipments" as GCS1
+    }
+
+    $rectanglePOS($soluqiqID="CO_APP_053", $name="Tesisquare", $zoneColor="#BUSINESS", $level="Z", $instance="1", $iconic="<&ban>", $fullname="TESISQUARE - TMS Transport Management System") {
+        usecase "TMS upstream (goods receiving)\n TMS downstream (goods deliveries)" as Tesi2
+    }
+
+    $rectanglePOS($soluqiqID="CO_APP_057", $name="Relex", $zoneColor="#Aqua", $level="Z", $instance="1", $iconic="<&audio-spectrum>", $fullname="RELEX - PMS Procurement Management System") {
+        usecase "demand forecast\nReplenishment and dispatch\nInventory Projections\nSpace optimization\nTeam Planning" as Relex1
+    }
+
+    $rectanglePOS($soluqiqID="CO_APP_042", $name="METI Store", $zoneColor="#LightPink", $level="Z", $instance="1", $iconic="<&arrow-bottom>", $fullname="METI - Retail Diamond Store")
+
+    $rectanglePOS($soluqiqID="CO_APP_049", $name="My Store", $zoneColor="#LightCyan", $level="Z", $instance="1", $iconic="<&arrow-circle-bottom>", $fullname="MY STORE - Mobility in store") {
+        usecase "employee efficiency in store" as mystore1
+    }
+
+    $rectanglePOS($soluqiqID="CO_APP_034", $name="RPE", $zoneColor="#Bisque", $level="Z", $instance="1", $iconic="<&bar-chart>", $fullname="RPE Replenishment Parameters Engine") {
+        usecase "Store resupply optimisation" as RPE1
+    }
+
+    $rectanglePOS($soluqiqID="CO_APP_028", $name="METI Matching", $zoneColor="#LightPink", $level="Z", $instance="1", $iconic="<&arrow-circle-left>", $fullname="METI - Retail Diamond Invoice Matching") {
+        usecase "Reconciliation Management\n" as metimatching1
+    }
+
+    $rectanglePOS($soluqiqID="CO_APP_017", $name="Smart Vision", $zoneColor="#Aquamarine", $level="Z", $instance="1", $iconic="<&audio>", $fullname="GOOGLE DATA STUDIO - Smartvision") {
+        usecase "Measure performance\nFind issues root cause\nDefine goals\nData Driven Decisions " as smartvision1
+    }
+
+CO_APP_0431 - CO_APP_0011
+CO_APP_0011 - CO_APP_0531
+CO_APP_0431 -- CO_APP_0571
+CO_APP_0571 - CO_APP_0421
+CO_APP_0421 - CO_APP_0491
+CO_APP_0571 -- CO_APP_0341
+CO_APP_0341 - CO_APP_0281
+CO_APP_0281 - CO_APP_0171
+
+
+}
+@enduml
