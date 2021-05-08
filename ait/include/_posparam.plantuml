@@ -4,7 +4,11 @@ allow_mixing
 skinparam Nodesep 1
 skinparam Ranksep 2
 skinparam ComponentStyle rectangle
-skinparam ArrowThickness 0
+
+!procedure $blankarrow()
+    skinparam ArrowThickness 0
+!endprocedure
+
 
 ' excel function
 ' =CONCATENATE("$rectanglePOS($soluqiqID=""",B2,""", $name=""",C2,""", $zoneColor=""#LightGray"", $level=""Z"", $instance=""1"", $iconic=""none"", $fullname=""",D2,""")")
