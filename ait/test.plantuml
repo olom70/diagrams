@@ -1,5 +1,7 @@
 @startuml FinanceOracle
 !include include/_posparam.plantuml
+!include include/__sbb.plantuml
 
+$P_CO_APP_001($i="2")
 
 @enduml

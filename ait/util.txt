@@ -1,0 +1,5 @@
+Extraire les lignes avec CO_APP et instance = 1 :
+    awk '/^.*CO_APP_.*instance="1".*/{print}' coremodel.plantuml > core.sbb
+
+Trier le fichier :
+    sort core.sbb > sbb.plantuml

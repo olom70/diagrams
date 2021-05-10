@@ -1,5 +1,6 @@
 @startuml CommerceDependencies
 !include include/_posparam.plantuml
+!include include/__sbb.plantuml
 
 title Commerce Applications Dependencies
 

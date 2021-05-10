@@ -1,0 +1,34 @@
+@startuml ShowSBB
+!include include/_posparam.plantuml
+!include include/__sbb.plantuml
+title SBB available to use
+
+$P_CO_APP_001($i="1")
+$P_CO_APP_005($i="1")
+$P_CO_APP_006($i="1")
+$P_CO_APP_008($i="1")
+$P_CO_APP_009($i="1")
+$P_CO_APP_016($i="1")
+$P_CO_APP_017($i="1")
+$P_CO_APP_022($i="1")
+$P_CO_APP_023($i="1")
+$P_CO_APP_024($i="1")
+$P_CO_APP_028($i="1")
+$P_CO_APP_029($i="1")
+$P_CO_APP_034($i="1")
+$P_CO_APP_036($i="1")
+$P_CO_APP_039($i="1")
+$P_CO_APP_042($i="1")
+$P_CO_APP_043($i="1")
+$P_CO_APP_047($i="1")
+$P_CO_APP_082($i="1")
+$P_CO_APP_068($i="1")
+$P_CO_APP_067($i="1")
+$P_CO_APP_057($i="1")
+$P_CO_APP_056($i="1")
+$P_CO_APP_053($i="1")
+$P_CO_APP_049($i="1")
+$P_CO_APP_051($i="1")
+
+
+@enduml
