@@ -1,5 +1,5 @@
 @startuml
-'!include _posparam.plantuml
+!include _posparam.plantuml
 
 !procedure $P_CO_APP_001($i="1")
     $rectanglePOS($soluqiqID="CO_APP_001", $name="GCS Generix", $zoneColor="#Azure", $level="Z", $instance=$i, $iconic="<&badge>", $fullname="GENERIX - WMS Warehouse Management System") {
@@ -38,7 +38,7 @@
 
 !procedure $P_CO_APP_017($i="1")
     $rectanglePOS($soluqiqID="CO_APP_017", $name="Smart Vision", $zoneColor="#Aquamarine", $level="Z", $instance=$i, $iconic="<&audio>", $fullname="GOOGLE DATA STUDIO - Smartvision") {
-        usecase "Measure performance\nFind issues root cause\nDefine goals\nData Driven Decisions " as smartvision1
+        usecase "Measure performance\nFind issues root cause\nDefine goals\nData Driven Decisions " as smartvision1##$i
     }
 !endprocedure
 
@@ -52,25 +52,25 @@
 
 !procedure $P_CO_APP_024($i="1")
     $rectanglePOS($soluqiqID="CO_APP_024", $name="METI Central", $zoneColor="#LightPink", $level="Z", $instance=$i, $iconic="<&align-right>", $fullname="METI Central") {
-        usecase "Manage commercial supplier referencing\nManage product referencing for B2B\nMastering product life cycle\nSend supplier and Product to MDM / METI" as MetiCentral6
+        usecase "Manage commercial supplier referencing\nManage product referencing for B2B\nMastering product life cycle\nSend supplier and Product to MDM / METI" as MetiCentral6##$i
     }
 !endprocedure
 
 !procedure $P_CO_APP_028($i="1")
     $rectanglePOS($soluqiqID="CO_APP_028", $name="METI Matching", $zoneColor="#LightPink", $level="Z", $instance=$i, $iconic="<&arrow-circle-left>", $fullname="METI - Retail Diamond Invoice Matching") {
-        usecase "Reconciliation Management\n" as metimatching1
+        usecase "Reconciliation Management\n" as metimatching1##$i
     }
 !endprocedure
 
 !procedure $P_CO_APP_029($i="1")
     $rectanglePOS($soluqiqID="CO_APP_029", $name="My Offer", $zoneColor="#Beige", $level="Z", $instance=$i, $iconic="<&arrow-circle-top>", $fullname="MY OFFER - Permanent Offer") {
-        usecase "Build multi-format offer\nOptimisation of detention and implementation" as MyOffer2
+        usecase "Build multi-format offer\nOptimisation of detention and implementation" as MyOffer2##$i
     }
 !endprocedure
 
 !procedure $P_CO_APP_034($i="1")
     $rectanglePOS($soluqiqID="CO_APP_034", $name="RPE", $zoneColor="#Bisque", $level="Z", $instance=$i, $iconic="<&bar-chart>", $fullname="RPE Replenishment Parameters Engine") {
-        usecase "Store resupply optimisation" as RPE1
+        usecase "Store resupply optimisation" as RPE1##$i
     }
 !endprocedure
 
@@ -83,17 +83,18 @@
 !endprocedure
 
 !procedure $P_CO_APP_039($i="1")
-    $rectanglePOS($soluqiqID="CO_APP_039", $name="Collector", $zoneColor="#LightSteelBlue", $level="Z", $instance=$i, $iconic="<&account-login>", $fullname="COMARCH - GDSN Provider & Product Referencing") {
-        usecase "product prereferencing\nproduct referencing\nsending product to GICA / METI / Enrichment" as pr1
+    $rectanglePOS($soluqiqID="CO_APP_039", $name="Collector", $zoneColor="#LightSteelBlue", $level="Z", $instance=$i, $iconic="<&account-login>", $fullname="COMARCH  GDSN Provider & Product Referencing") {
+        usecase "product prereferencing product referencing sending product to GICA - METI - Enrichment" as pr1##$i
     }
 
 !procedure $P_CO_APP_042($i="1")
-    $rectanglePOS($soluqiqID="CO_APP_042", $name="METI Store", $zoneColor="#LightPink", $level="Z", $instance=$i, $iconic="<&account-login>", $fullname="METI  Retail Diamond Store")
+    $rectanglePOS($soluqiqID="CO_APP_042", $name="METI Store", $zoneColor="#LightPink", $level='.', $instance=$i, iconic="<&arrow-bottom>", $fullname= "METI Retail Diamond Store")
 !endprocedure
+
 
 !procedure $P_CO_APP_043($i="1")
     $rectanglePOS($soluqiqID="CO_APP_043", $name="METI Supply", $zoneColor="#LightPink", $level="Z", $instance=$i, $iconic="<&aperture>", $fullname="METI  Retail Diamond Supply") {
-        usecase "Supply chain from suppliers to customer" as MetiSupply7
+        usecase "Supply chain from suppliers to customer" as MetiSupply7##$i
     }
 !endprocedure
 
@@ -105,19 +106,19 @@
 
 !procedure $P_CO_APP_049($i="1")
     $rectanglePOS($soluqiqID="CO_APP_049", $name="My Store", $zoneColor="#LightCyan", $level="Z", $instance=$i, $iconic="<&arrow-circle-bottom>", $fullname="MY STORE - Mobility in store") {
-        usecase "employee efficiency in store" as mystore1
+        usecase "employee efficiency in store" as mystore1##$i
     }
 !endprocedure
 
 !procedure $P_CO_APP_051($i="1")
     $rectanglePOS($soluqiqID="CO_APP_051", $name="ANEE", $zoneColor="#LightGoldenRodYellow", $level="Z", $instance=$i, $iconic="<&arrow-circle-right>", $fullname="ANEE - Negociation and Management of Supplier contracts") {
-        usecase "Negotiation\nContracting\nInvoicing" as ANEE1
+        usecase "Negotiation\nContracting\nInvoicing" as ANEE1##$i
     }
 !endprocedure
 
 !procedure $P_CO_APP_053($i="1")
     $rectanglePOS($soluqiqID="CO_APP_053", $name="Tesisquare", $zoneColor="#BUSINESS", $level="Z", $instance=$i, $iconic="<&ban>", $fullname="TESISQUARE - TMS Transport Management System") {
-        usecase "TMS upstream (goods receiving)\n TMS downstream (goods deliveries)" as Tesi2
+        usecase "TMS upstream (goods receiving)\n TMS downstream (goods deliveries)" as Tesi2##$i
     }
 
 !endprocedure
