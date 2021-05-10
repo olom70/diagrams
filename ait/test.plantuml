@@ -3,7 +3,6 @@
 !include include/__sbb.plantuml
 
 
-
 $rectanglePOS($name="Upstream", $type="package", $instance="1") {
     $P_CO_APP_043($i="2")
     $P_CO_APP_001($i="2")
