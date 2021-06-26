@@ -1,0 +1,133 @@
+@startuml Process
+skinparam handwritten true
+skinparam componentStyle rectangle
+!theme plain
+
+package "Reference a Product" {
+
+[process 1] as p1
+[process 2] as p2
+[Process 3] as p3
+
+p1 -> p2
+p2 -> p3
+
+
+}
+
+@enduml
+
+@startuml Several Processes
+skinparam handwritten true
+skinparam componentStyle rectangle
+!theme plain
+
+card "Other need fullfilled" as c3 {
+
+[process 1a] as p7
+[process 2a] as p8
+[Process 3a] as p9
+
+p7 -> p8
+p8 -> p9
+
+
+}
+
+
+card "Reference a product" as c1 {
+
+[process 1] as p1
+[process 2] as p2
+[Process 3] as p3
+
+p1 -> p2
+p2 -> p3
+
+}
+
+
+card "Other need fullfilled" as c2 {
+
+[process 1c] as p4
+[process 2c] as p5
+[Process 3c] as p6
+
+p4 -> p5
+p5 -> p6
+
+
+}
+
+c3 -> c1
+c1 ---> c2 : information flow (integration pattern)
+c1 -> c3 : information flow (integration pattern)
+c2 -> c1
+c3 --> c2
+c2 -> c3 : information flow (integration pattern)
+
+@enduml
+
+
+@startuml Core Model
+skinparam handwritten true
+skinparam componentStyle rectangle
+!theme plain
+
+
+card "Customer Diamond" as c1 {
+    
+    card need1 {
+        [processes] as p1
+        [Business Applications] as b1
+        b1 -u-> p1
+    }
+
+    card need2 {
+        [processes] as p1a
+        [Business Applications] as b1a
+        b1a -u-> p1a
+    }
+}
+
+card "Commerce Diamond" as c2 {
+    
+    card "need x" {
+        [processes] as p2
+        [Business Applications] as b2
+        b2 -u-> p2
+    }
+}
+
+card "Finance Diamond" as c3 {
+    
+    card "need y" {
+    
+        [processes] as p3
+        [Business Applications] as b3
+        b3 -u-> p3
+    }
+}
+
+c1 -> c2
+c2 -l-> c1
+c1 -> c3
+c3 -l-> c1
+c2 -> c3
+c3 -l-> c2
+
+card repositories as c4 {
+
+database r1
+database r2
+database r3
+database r4
+}
+
+c4 -u--> c1 : information flow (integration pattern)
+c4 -u--> c2 : information flow (integration pattern)
+c4 -u----> c3
+
+
+
+@enduml

@@ -83,7 +83,7 @@
 !endprocedure
 
 !procedure $P_CO_APP_039($i="1")
-    $rectanglePOS($soluqiqID="CO_APP_039", $name="Collector", $zoneColor="#LightSteelBlue", $level="Z", $instance=$i, $iconic="<&account-login>", $fullname="COMARCH  GDSN Provider & Product Referencing") {
+    $rectanglePOS($soluqiqID="CO_APP_039", $name="Collector", $zoneColor="#LightSteelBlue", $level="Z", $instance=$i, $iconic="<&account-login>", $fullname="COMARCH  GDSN Provider  Product Referencing") {
         usecase "product prereferencing\nproduct referencing\nsending product to GICA - METI - Enrichment" as pr1##$i
     }
 

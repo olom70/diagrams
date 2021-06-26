@@ -1,0 +1,51 @@
+@startuml Collector-Anee
+!include include/_posparam.plantuml
+!include include/__sbb.plantuml
+
+title Collector-Anee Functional Framework
+
+$rectanglePOS("Z007", "Offer (products & services)", "green", "Z" ) {
+    $rectanglePOS("Q0040", "Partners Management", "green", "Q"){
+        $rectanglePOS("IL00093", "Catalog Publication to Partners", $level="I") {
+            $rectanglePOS($soluqiqID="CO_APP_039", $name="Collector", $zoneColor="#LightSteelBlue", $level="Z", $instance=1, $iconic="<&account-login>", $fullname="")
+
+        }
+    }
+    $rectanglePOS("Q0042", "Offer to Customers", "green", "Q"){
+        $rectanglePOS("IL00086", "Vendor catalog", $level="I") {
+            $rectanglePOS($soluqiqID="CO_APP_039", $name="Collector", $zoneColor="#LightSteelBlue", $level="Z", $instance=2, $iconic="<&account-login>", $fullname="")
+        }
+    }
+
+}
+
+$rectanglePOS("Z004", "Support", "purple", "Z" ) {
+        $rectanglePOS("Q0022", "Accountability / Finance", "purple", "Q") {
+        $rectanglePOS("IL00006", "Payables Accounting", $level="I") {
+            $rectanglePOS($soluqiqID="CO_APP_051", $name="ANEE", $zoneColor="#LightGoldenRodYellow", $level="Z", $instance=3, $iconic="<&arrow-circle-right>", $fullname="")
+
+        }
+
+    }
+}
+
+$rectanglePOS("Z001", "Direct and indirect purchase", "green", "Z" ) {
+    $rectanglePOS("Q0105", "Direct Purchase",  "green", "Q"){
+        $rectanglePOS("IL00011", "Product Referencing", $level="I"){
+            $rectanglePOS($soluqiqID="CO_APP_039", $name="Collector", $zoneColor="#LightSteelBlue", $level="Z", $instance=3, $iconic="<&account-login>", $fullname="")
+
+        }
+        $rectanglePOS("IL00132", "Supplier negotiation", $level="I") {
+            $rectanglePOS($soluqiqID="CO_APP_039", $name="Collector", $zoneColor="#LightSteelBlue", $level="Z", $instance=4, $iconic="<&account-login>", $fullname="")
+            $rectanglePOS($soluqiqID="CO_APP_051", $name="ANEE", $zoneColor="#LightGoldenRodYellow", $level="Z", $instance=1, $iconic="<&arrow-circle-right>", $fullname="")
+        }
+                $rectanglePOS("IL00135", "Supplier contract management", $level="I") {
+            $rectanglePOS($soluqiqID="CO_APP_051", $name="ANEE", $zoneColor="#LightGoldenRodYellow", $level="Z", $instance=2, $iconic="<&arrow-circle-right>", $fullname="")
+
+        }
+    }
+}
+
+
+
+

@@ -4,3 +4,7 @@ https://crashedmind.github.io/PlantUMLHitchhikersGuide/about/AboutPlantUML.html
 https://bschwarz.github.io/puml-themes/
 https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html
 https://plantuml-documentation.readthedocs.io/en/latest/formatting/color-names.html
+
+
+
+sudo docker run -d -p 8080:8080 plantuml/plantuml-server:tomcat
