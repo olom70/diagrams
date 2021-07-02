@@ -210,3 +210,35 @@ c1 --> b1 : served by
 
 b1 --> r1 : served by
 @enduml
+
+@startuml link BA
+'skinparam handwritten true
+skinparam componentStyle rectangle
+!theme metal
+
+[**Business Repositories**] as B
+[**Architecture Repositories**] as A
+
+B <-r-> A : __**link**__
+
+@enduml
+
+@startuml archiFunction
+'skinparam handwritten true
+skinparam componentStyle rectangle
+!theme plain
+sprite $aFunction jar:archimate/business-function
+
+rectangle Function <<$aFunction>> #Business
+
+@enduml
+
+@startuml archiObject
+'skinparam handwritten true
+skinparam componentStyle rectangle
+!theme plain
+sprite $aFunction jar:archimate/business-object
+
+rectangle "Data" <<$aFunction>> #Application
+
+@enduml
